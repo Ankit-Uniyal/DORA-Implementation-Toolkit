@@ -129,4 +129,4 @@ Roll the control ratings up into one entity-level opinion using this guide. Adju
 
 ## Linking to priorities
 
-Give every finding a priority using the [maturity model](../gap-assessment/maturity-model.md) priority table. Legal breaches are always P1.
+Give every finding a priority using the [maturity model](../1-gap-assessment/maturity-model.md) priority table. Legal breaches are always P1.
