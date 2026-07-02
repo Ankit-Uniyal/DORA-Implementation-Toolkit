@@ -1,74 +1,95 @@
-# Pillar 3 — Digital Operational Resilience Testing
+# Pillar 3 - Digital Operational Resilience Testing
 
-**DORA articles:** Art. 24 (general requirements for testing), Art. 25 (testing of ICT tools and systems), Art. 26 (advanced testing based on threat-led penetration testing — TLPT), Art. 27 (requirements for testers). Supplemented by the RTS on TLPT (aligned with the TIBER-EU framework).
+**DORA articles:** Art. 24 to 27. Supplemented by the RTS on TLPT, which lines up with the TIBER-EU framework.
+
+**Read first:** [Glossary](../glossary.md). **Use with:** [TLPT scoping worksheet](../../templates/tlpt-scoping-worksheet.md).
 
 ---
 
-## 1. Purpose
+## 1. What this pillar is really about
 
-DORA requires a risk-based digital operational resilience testing programme to identify weaknesses, deficiencies and gaps, and to verify the readiness to respond to ICT-related incidents. Testing sits on two tiers: a **baseline** programme required of all in-scope entities, and **advanced threat-led penetration testing (TLPT)** required of a subset of significant entities identified by authorities.
+You can write perfect policies and still fail in a real crisis. Testing is how you find out if your defences actually work before an attacker or an outage does. DORA asks for two levels of testing:
 
-## 2. General testing requirements (Art. 24)
+- **Baseline testing:** every in-scope firm does this. Regular, risk-based checks of your systems.
+- **Advanced testing (TLPT):** only firms the regulator names do this. Skilled testers act like real attackers against your live systems.
 
-- Establish, maintain and review a sound and comprehensive **digital operational resilience testing programme** as an integral part of the ICT risk management framework.
-- Testing must be **risk-based**, follow a documented methodology, and be performed by independent parties (internal or external).
-- Prioritise, classify and remediate all issues revealed during testing; establish counter-measures and validate their effectiveness.
-- All **critical ICT systems and applications** must be tested at least yearly.
+The simple mental model: baseline testing checks the locks and alarms; TLPT hires an ethical burglar to actually try to break in.
 
-## 3. Baseline testing toolkit (Art. 25)
+## 2. Baseline testing (Art. 24 and 25)
 
-The programme should include, as appropriate: vulnerability assessments and scans, open-source analyses, network security assessments, gap analyses, physical security reviews, questionnaires and scanning software solutions, source-code reviews where feasible, scenario-based tests, compatibility testing, performance testing, end-to-end testing, and penetration testing. For microenterprises, tests are planned by combining a risk-based approach with the strategic evolution of ICT.
+You need a written testing programme that is part of your ICT risk framework, is based on risk, uses a clear method, and is run by people independent of those who built the systems. All critical systems and applications must be tested at least once a year. Every issue found must be prioritised, fixed, and re-checked.
 
-## 4. Advanced testing — TLPT (Art. 26)
+The toolbox of test types includes: vulnerability scans, network security tests, gap analysis, source code review where possible, scenario-based tests, performance and load tests, end-to-end tests, and penetration tests. You pick the mix that fits each system's risk.
 
-Entities identified by competent authorities (based on impact on the financial sector, financial-stability concerns, and ICT risk profile) must carry out **TLPT at least every three years** (the authority may adjust the frequency). Key features:
-- TLPT covers several or all **critical or important functions** and is performed on live production systems.
-- The scope is validated by the authority (or the designated public body).
-- Where ICT third-party providers are in scope, they are included in the TLPT; pooled testing arrangements are possible for shared providers.
-- On completion, a summary of findings, remediation plans and documentation must be provided, and the authority issues an attestation confirming the test was performed in accordance with requirements.
-- The RTS on TLPT is developed in line with the **TIBER-EU** framework (red-team testing driven by realistic threat intelligence).
+**What good looks like:** a test calendar that maps every critical system to a test in the year, a findings tracker where issues are fixed and re-tested, and testers who did not build the thing they are testing.
 
-## 5. Requirements for testers (Art. 27)
+**What weak looks like:** occasional testing with no plan, findings that are noted but never fixed, and no proof that critical systems were all covered.
 
-Testers must have: the highest suitability and reputation; technical and organisational capabilities and specific expertise in threat intelligence, penetration testing and red-team testing; certification or adherence to formal codes of conduct/frameworks; and (for external testers) professional indemnity insurance. Where internal testers are used, additional conditions apply (approval by the authority, no conflicts of interest, etc.).
+## 3. Advanced testing: TLPT (Art. 26)
 
-## 6. Control objectives
+TLPT is only for firms the regulator identifies, based on how important and risky they are. You do not opt in. If you are named:
+
+- You run TLPT at least every three years (the regulator can change this).
+- It covers several or all of your critical or important functions.
+- It runs on live production systems, safely managed by a small control team.
+- If outside providers support those functions, they are included, sometimes through shared "pooled" tests.
+- The regulator validates the scope and, at the end, issues an attestation that the test met the rules.
+- The method follows the RTS, which is built on TIBER-EU (threat-led red team testing driven by real threat intelligence).
+
+**Plain-English warning:** a normal penetration test is not a TLPT. TLPT is a full, intelligence-led red team exercise on production, with regulator oversight. If you are in scope and you only do standard pen tests, you have a gap. Use the [TLPT scoping worksheet](../../templates/tlpt-scoping-worksheet.md).
+
+## 4. Who can test (Art. 27)
+
+Testers must be highly capable and reputable, with real expertise in threat intelligence, penetration testing, and red teaming. External testers need professional indemnity insurance. If you use internal testers, extra rules apply, including regulator approval and managing conflicts of interest.
+
+## 5. Control objectives
 
 | ID | Control objective |
 |----|-------------------|
-| TST-01 | A documented, risk-based resilience testing programme exists and is reviewed periodically. |
-| TST-02 | All critical ICT systems and applications are tested at least annually. |
-| TST-03 | Testing uses an appropriate mix of techniques proportionate to risk. |
-| TST-04 | Testers are independent and appropriately qualified; conflicts of interest are managed. |
-| TST-05 | Findings are prioritised, classified, remediated, and re-validated. |
-| TST-06 | Entities in scope for TLPT conduct it at least every three years covering critical/important functions on production. |
-| TST-07 | In-scope ICT third parties are included in TLPT (or via pooled testing). |
-| TST-08 | TLPT is conducted per the RTS/TIBER-EU methodology, with authority validation and attestation. |
+| TST-01 | A documented, risk-based testing programme exists and is reviewed. |
+| TST-02 | All critical systems and applications are tested at least yearly. |
+| TST-03 | Testing uses a suitable mix of methods for the risk. |
+| TST-04 | Testers are independent and qualified, with conflicts managed. |
+| TST-05 | Findings are prioritised, fixed, and re-checked. |
+| TST-06 | If in scope, TLPT runs at least every three years on production critical functions. |
+| TST-07 | In-scope third parties are included in TLPT, or via pooled testing. |
+| TST-08 | TLPT follows the RTS and TIBER-EU, with regulator validation and attestation. |
 
-## 7. Implementation steps
+## 6. How to implement, in order
 
-1. **Design the testing programme**: inventory critical systems, define a risk-based test calendar, methods, and independence rules.
-2. **Establish the baseline test suite** (vulnerability scanning, pen tests, scenario/end-to-end tests, etc.) with owners and cadence.
-3. **Build a remediation workflow** linking findings to risk register, owners, deadlines and re-test.
-4. **Determine TLPT applicability** with your competent authority and plan the multi-year cycle if in scope.
-5. **Scope TLPT** around critical/important functions and relevant third parties; engage threat-intelligence and red-team providers meeting Art. 27 criteria.
-6. **Run the TLPT** per TIBER-EU phases (preparation, threat intelligence & red teaming, closure), with control-team oversight and authority validation.
-7. **Report and attest**: capture findings, remediation plans, and obtain the authority attestation.
-8. **Feed results** into the ICT risk framework and continuous improvement loop.
+1. **Weeks 1 to 4:** List critical systems and design a risk-based test calendar and method.
+2. **Weeks 3 to 8:** Set up the baseline test suite (scans, pen tests, scenario tests) with owners and dates.
+3. **Weeks 4 to 10:** Build a findings workflow that links each issue to an owner, a deadline, and a re-test.
+4. **Weeks 6 to 12:** Check with your regulator whether you are named for TLPT.
+5. **If in scope for TLPT:** plan the multi-year cycle, scope it around critical functions and third parties, and engage qualified providers. Use the scoping worksheet.
+6. **Ongoing:** run tests to the calendar, fix findings, and feed results back into the risk framework.
 
-## 8. Evidence to retain
+## 7. Sample artifact: a test calendar row
 
-- Testing programme document and annual test calendar.
-- Test reports for critical systems (dated, with scope and methodology).
-- Tester independence/qualification records and, for external testers, insurance.
-- Findings register with prioritisation, remediation and re-test evidence.
-- TLPT scoping documents, threat-intel and red-team reports, control-team logs.
-- Authority validation and attestation for TLPT.
+| System | Function | Test type | Frequency | Last test | Result | Next test | Owner |
+|--------|----------|-----------|-----------|-----------|--------|-----------|-------|
+| Core payments | Payments (critical) | Penetration test | Annual | 2025-06 | 2 highs fixed and re-tested | 2026-06 | Head of Security |
 
-## 9. Common pitfalls
+## 8. Sample artifact: a findings tracker row
 
-- Ad hoc testing with no documented, risk-based programme.
-- Critical systems missed in the annual test cycle due to incomplete inventory.
-- Findings identified but not tracked to closure or re-tested.
-- Assuming baseline penetration testing satisfies the TLPT requirement (it does not — TLPT is threat-led red teaming on production).
-- Overlooking in-scope third parties in TLPT scope.
+| Finding | Severity | System | Raised | Owner | Fix due | Status | Re-test date | Result |
+|---------|----------|--------|--------|-------|---------|--------|--------------|--------|
+| Unpatched web server | High | Core payments | 2025-06-10 | Platform team | 2025-06-24 | Closed | 2025-07-01 | Verified fixed |
+
+## 9. Evidence to keep
+
+The testing programme and calendar, dated test reports for critical systems, tester qualification and independence records (and insurance for external testers), the findings tracker showing fixes and re-tests, and, if in scope, TLPT scope documents, threat intelligence and red team reports, control-team logs, and the regulator attestation.
+
+## 10. Common mistakes
+
+- Ad hoc testing with no risk-based plan.
+- A critical system missed because the inventory was incomplete.
+- Findings that are logged but never fixed or re-tested.
+- Assuming standard pen testing meets the TLPT duty. It does not.
+- Leaving in-scope third parties out of TLPT scope.
+
+## 11. Quick self-check
+
+- Can you show that every critical system was tested in the last 12 months? If not, close the coverage gap.
+- When you find a serious issue, can you prove it was fixed and re-tested? If not, fix the findings workflow.
+- Do you know for certain whether you are named for TLPT? If not, ask your regulator before assuming you are out.
