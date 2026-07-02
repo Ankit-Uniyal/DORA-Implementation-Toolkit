@@ -1,67 +1,102 @@
-# Pillar 0 — Governance, Organisation & Proportionality
+# Pillar 0 - Governance, Organisation and Proportionality
 
-**DORA articles:** Art. 5 (governance and organisation), Art. 6 (ICT risk management framework), Art. 4 (proportionality principle).
+**DORA articles:** Art. 4 (proportionality), Art. 5 (governance), Art. 6 (framework).
+
+**Read first:** [Glossary](../glossary.md) and [Proportionality guide](../proportionality-guide.md).
 
 ---
 
-## 1. Purpose
+## 1. What this pillar is really about
 
-DORA places ultimate accountability for digital operational resilience on the **management body** (board / senior management). This section establishes the governance backbone on which all five pillars depend, and explains how the **proportionality principle** scales obligations to your entity.
+DORA puts the board in charge of ICT risk and does not let them pass the buck. The board cannot say "that is the IT team's problem". They own it. This pillar is about making that ownership real: clear roles, real oversight, enough money and skill, and a sensible view of how much of DORA applies to your firm.
 
-## 2. Key DORA requirements
+Get this pillar right and the other four become much easier, because someone senior is accountable and the operating model is clear. Get it wrong and everything else drifts, because no one truly owns it.
 
-### 2.1 Management body responsibilities (Art. 5)
-The management body must:
-- Bear **final responsibility** for managing ICT risk — it cannot be delegated away.
-- Define, approve, oversee and be accountable for the ICT risk management framework.
-- Put in place governance arrangements ensuring effective and prudent management of ICT risk.
-- Approve and periodically review the ICT business continuity policy and ICT response and recovery plans.
-- Approve and review the entity's internal audit plans covering ICT.
-- Approve and review the policy on arrangements with ICT third-party service providers.
-- Allocate and periodically review an **appropriate budget** to fulfil digital operational resilience needs.
-- Actively keep up to date with sufficient knowledge and skills to understand and assess ICT risk (including regular, mandatory training).
-- Set clear roles and responsibilities for all ICT-related functions and establish accountability lines.
+## 2. What the board must do (Art. 5)
 
-### 2.2 The proportionality principle (Art. 4)
-Requirements apply **taking into account the size and overall risk profile, and the nature, scale and complexity of services, activities and operations** of the entity. Proportionality is a two-way street: it neither exempts an entity from core obligations nor requires disproportionate effort.
+The board holds final responsibility for ICT risk. In practice this means the board must:
 
-### 2.3 Simplified ICT risk management framework (Art. 16)
-Certain entities (e.g. small and non-interconnected investment firms, small payment/e-money institutions, small institutions for occupational retirement provision, and others listed in Art. 16(1)) may apply a **simplified** framework. This still requires: a sound documented ICT framework; continuous monitoring of ICT systems; minimisation of impact through controls; detection of anomalies; business continuity and recovery; and periodic testing.
+- Approve the ICT risk management framework and then actually oversee it, not just sign it once.
+- Approve the business continuity policy and the response and recovery plans.
+- Approve the policy for using outside ICT providers.
+- Approve the internal audit plan that covers ICT.
+- Set aside enough budget for resilience and review it.
+- Keep their own knowledge up to date through regular training.
+- Make sure roles and accountability for ICT are clear.
 
-## 3. Control objectives
+**What good looks like:** board minutes that show real discussion and challenge, not just "noted and approved". A named board member or committee that owns ICT risk. A training log that includes the board. A budget line for resilience that the board reviews.
+
+**What weak looks like:** the board sees ICT risk once a year as a slide, asks no questions, and delegates everything to the CISO with no oversight.
+
+## 3. Proportionality (Art. 4)
+
+DORA scales to your firm. The rules apply in a way that fits your size, risk, and complexity. This does not exempt anyone. It changes the depth, not the goal.
+
+Work out your position using the [Proportionality guide](../proportionality-guide.md). The key outputs you need are: are you in scope, can you use the simplified framework (Art. 16), and which of your functions are critical or important.
+
+## 4. The simplified framework (Art. 16)
+
+Some smaller or lower-risk firms can use a lighter framework. It still requires a real framework, monitoring, controls, detection, continuity, recovery, testing, and incident reporting. It reduces formality, not protection. Check eligibility in the proportionality guide, and if unsure, treat yourself as full-framework until a lawyer confirms otherwise.
+
+## 5. Control objectives
 
 | ID | Control objective |
 |----|-------------------|
-| GOV-01 | The management body has formally approved the ICT risk management framework and reviews it at least annually. |
-| GOV-02 | Roles, responsibilities and accountability for ICT risk are documented and communicated (e.g. via a RACI). |
-| GOV-03 | The management body receives regular, meaningful ICT risk reporting and evidences challenge/oversight. |
-| GOV-04 | Members of the management body complete ICT resilience training appropriate to their role. |
-| GOV-05 | An adequate ICT resilience budget is allocated and reviewed. |
-| GOV-06 | Proportionality tier and (if applicable) eligibility for the simplified framework are assessed and documented. |
-| GOV-07 | Three-lines-of-defence model is defined; internal audit independently covers ICT risk. |
+| GOV-01 | The board has approved the ICT risk framework and reviews it at least yearly. |
+| GOV-02 | Roles, responsibilities and accountability for ICT risk are documented and shared. |
+| GOV-03 | The board gets regular ICT risk reporting and shows real challenge. |
+| GOV-04 | Board members complete ICT resilience training suited to their role. |
+| GOV-05 | An adequate resilience budget is set and reviewed. |
+| GOV-06 | The proportionality tier and simplified-framework eligibility are assessed and written down. |
+| GOV-07 | A three-lines-of-defence model is defined and internal audit covers ICT independently. |
 
-## 4. Implementation steps
+## 6. How to implement, in order
 
-1. **Confirm applicability and tier.** Determine whether your entity is in scope, identify your entity type, and document your proportionality assessment. Assess eligibility for the simplified framework (Art. 16).
-2. **Assign accountability.** Formally designate management-body ownership of ICT risk. Establish a control function to monitor ICT third-party arrangements (Art. 6(4) requires a designated control function / role for entities other than microenterprises).
-3. **Define the operating model.** Document the three lines of defence, the ICT risk committee/forum, escalation paths, and decision rights (RACI).
-4. **Approve the framework.** Have the management body formally approve the ICT risk management framework and supporting policies; minute the approval.
-5. **Establish reporting.** Define ICT risk MI (metrics, incidents, testing results, third-party concentration, remediation status) and a reporting calendar to the board.
-6. **Budget & training.** Allocate a resilience budget; roll out mandatory board and staff ICT risk training with attendance records.
-7. **Independent assurance.** Ensure the internal audit plan explicitly covers the ICT risk framework with appropriate frequency and skills.
+1. **Weeks 1 to 2:** Confirm scope and proportionality using the guide. Write down the reasoning.
+2. **Weeks 2 to 4:** Name the accountable board member or committee for ICT risk.
+3. **Weeks 3 to 6:** Define the operating model: three lines of defence, a RACI, and who decides what.
+4. **Weeks 4 to 8:** Set up board reporting: what metrics, how often, to whom.
+5. **Weeks 6 to 10:** Agree the resilience budget and a board training plan.
+6. **Ongoing:** Board approves the framework, reviews reporting, and internal audit covers ICT each cycle.
 
-## 5. Evidence to retain
+## 7. Sample artifact: a simple RACI
 
-- Board minutes approving the framework and key policies (with dates).
-- Organisation chart, RACI, and terms of reference for ICT risk governance forums.
-- Proportionality / simplified-framework eligibility assessment.
-- Training records and attendance for the management body.
-- Budget approvals referencing ICT resilience.
-- Internal audit plan and ICT audit reports.
+R = does the work, A = accountable, C = consulted, I = informed.
 
-## 6. Common pitfalls
+| Activity | Board | CISO | IT Ops | Risk | Internal Audit |
+|----------|-------|------|--------|------|----------------|
+| Approve ICT risk framework | A | R | C | C | I |
+| Run day-to-day security controls | I | A | R | C | I |
+| Report major incidents to regulator | A | R | C | C | I |
+| Oversee third-party risk | A | C | C | R | I |
+| Independently test the controls | I | I | I | C | A/R |
 
-- Treating ICT risk as purely an IT/CISO matter rather than a board accountability.
-- No documented proportionality rationale (assessors expect to see the reasoning, not just the conclusion).
-- Board reporting that lists metrics but shows no evidence of challenge or decision-making.
-- Assuming the simplified framework removes the need for testing and continuity — it does not.
+Adjust roles to your own structure. The point is that every important activity has exactly one "A".
+
+## 8. Sample artifact: a board reporting pack outline
+
+A good monthly or quarterly board ICT risk pack covers, on one or two pages:
+
+- Top ICT risks and any change since last time.
+- Major incidents in the period and their status.
+- Results of any resilience testing.
+- Third-party risk and concentration highlights.
+- Progress on remediation actions, with owners and dates.
+- Any decisions the board needs to make.
+
+## 9. Evidence to keep
+
+Board minutes approving the framework and key policies (dated), the org chart and RACI, terms of reference for any ICT risk committee, the proportionality assessment, board training records, budget approvals that mention resilience, and the internal audit plan and reports covering ICT.
+
+## 10. Common mistakes
+
+- Treating ICT risk as only an IT matter, not a board duty.
+- No written proportionality reasoning. Assessors want the "why".
+- Board reporting that lists numbers but shows no challenge or decisions.
+- Assuming the simplified framework removes testing and continuity. It does not.
+
+## 11. Quick self-check
+
+- Can you point to board minutes from this year approving the framework, with real discussion? If not, fix this first.
+- Is there exactly one person or committee accountable for ICT risk? If ownership is fuzzy, everything downstream will be too.
+- Have you written down whether you use the full or simplified framework, and why? If not, do the proportionality assessment now.
