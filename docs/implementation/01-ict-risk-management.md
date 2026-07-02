@@ -1,103 +1,127 @@
-# Pillar 1 — ICT Risk Management
+# Pillar 1 - ICT Risk Management
 
-**DORA articles:** Art. 5–16 (ICT risk management framework and its components). Supplemented by RTS on ICT risk management framework and the simplified ICT risk management framework.
+**DORA articles:** Art. 5 to 16. Supplemented by the RTS on the ICT risk management framework and the RTS on the simplified framework.
+
+**Read first:** [Glossary](../glossary.md) and [Proportionality guide](../proportionality-guide.md).
 
 ---
 
-## 1. Purpose
+## 1. What this pillar is really about
 
-The ICT risk management framework is the foundation of DORA. It requires financial entities to identify, protect, detect, respond to, and recover from ICT risks across their entire technology estate, on a continuous basis, and to learn and evolve.
+This pillar is the foundation. Everything else in DORA sits on top of it. In plain terms it asks one question: do you know what technology you depend on, and can you protect it, spot trouble, and recover when something breaks?
 
-## 2. Structure of the framework (Art. 6)
+DORA breaks that into five simple jobs that repeat forever in a loop:
 
-The framework must be documented, reviewed **at least once a year** (and after major incidents or following supervisory instructions), and continuously improved. It must include the strategies, policies, procedures, ICT protocols and tools needed to protect all information and ICT assets. Entities must maintain a **digital operational resilience strategy** setting how the framework is implemented, including risk tolerance levels, objectives, and a reference architecture.
+1. **Identify** what you have and what could go wrong.
+2. **Protect** it.
+3. **Detect** problems early.
+4. **Respond and recover** when problems happen.
+5. **Learn** and improve.
 
-## 3. Framework components (Art. 7–13)
+If you can show you do all five, consistently, with evidence, you are most of the way to meeting this pillar.
 
-### 3.1 ICT systems, protocols and tools (Art. 7)
-Use and maintain ICT systems that are reliable, resilient, with sufficient capacity, and technologically resilient to handle peak conditions and adverse scenarios.
+## 2. The framework document (Art. 6)
 
-### 3.2 Identification (Art. 8)
-- Identify, classify and adequately document all ICT-supported business functions, roles and responsibilities, the information assets and ICT assets supporting them, and their interdependencies.
-- Maintain an inventory and update it periodically and after major changes.
-- Identify all sources of ICT risk, and assess cyber threats and vulnerabilities relevant to functions/assets.
-- Perform a risk assessment upon each major change.
-- Map dependencies on ICT third-party service providers.
+You need one written ICT risk management framework. The board approves it. You review it at least once a year, and also after any major incident or when the regulator tells you to.
 
-### 3.3 Protection and prevention (Art. 9)
-- Continuously monitor and control the security and functioning of ICT systems and tools.
-- Minimise the impact of ICT risk through appropriate strategies, policies, procedures and tools.
-- Design and implement an information security policy defining rules to protect confidentiality, integrity, availability and authenticity of data.
-- Implement identity and access management, strong authentication, network security, encryption/cryptographic controls, secure configuration, change management, and patching.
+**What good looks like:** a single, version-controlled document (or a small set of linked documents) that states your risk appetite, names the owner, lists the policies underneath it, and has a dated board approval. It is short enough that people actually read it and specific enough that it drives real decisions.
 
-### 3.4 Detection (Art. 10)
-- Have mechanisms to promptly detect anomalous activities, ICT network performance issues and ICT-related incidents.
-- Define multiple layers of control, alert thresholds and criteria to trigger incident detection/response.
+**What weak looks like:** a 90-page document written once, approved once, and never opened again. Or a pile of separate policies with no top-level framework tying them together.
 
-### 3.5 Response and recovery (Art. 11)
-- Put in place an **ICT business continuity policy**, including plans, response and recovery measures, and communication.
-- Set recovery objectives (RTO/RPO) so that recovery is possible with minimal disruption.
-- Ensure at least one set of restoration capabilities and redundancy.
-- Test the plans periodically.
+## 3. The five jobs in detail
 
-### 3.6 Backup and restoration (Art. 12)
-- Develop backup policies and procedures specifying scope and minimum frequency based on criticality.
-- Keep backup systems physically and logically segregated from source systems.
-- Maintain redundant ICT capacity with adequate resources and functions.
+### 3.1 Identify (Art. 8)
 
-### 3.7 Learning and evolving (Art. 13)
-- Gather information on vulnerabilities, cyber threats, incidents (especially cyber-attacks) and analyse likely impacts.
-- Conduct post-incident reviews after significant disruptions.
-- Continuously develop ICT security awareness programmes and digital operational resilience training for staff and management.
+Know your estate. Keep an inventory of your business functions, the information and ICT assets that support them, and how they depend on each other and on outside providers. Assess your risks, and reassess whenever something big changes.
 
-### 3.8 Communication (Art. 14)
-- Have crisis communication plans for disclosing incidents/vulnerabilities to clients, counterparts and the public as appropriate.
+**What good looks like:** a live asset inventory (see the [ICT asset register template](../../templates/ict-asset-register.md)) where every critical system is linked to the business function it supports, to its owner, to its recovery targets, and to any third party involved. Risk assessments are repeatable and recorded, not done from memory.
+
+**Concrete first step:** list your top 10 business functions. For each, write down the systems it needs, the data it uses, and the outside providers it relies on. That single table exposes most of your real risk on day one.
+
+### 3.2 Protect (Art. 9)
+
+Reduce the chance and impact of harm. This is your information security. It includes access control, strong authentication, encryption, network security, secure configuration, change management, and patching.
+
+**What good looks like:** written control standards that say exactly what is expected (for example, "multi-factor authentication is required for all remote and administrative access", "critical patches are applied within a defined number of days", "all changes to production go through recorded approval"). These are enforced and checked, not just written.
+
+**Plain-English tip:** DORA does not invent new security controls. If you already run a recognised security standard well, most of your protection work is done. The gap is usually proving it and linking it to critical functions.
+
+### 3.3 Detect (Art. 10)
+
+Spot unusual activity and incidents quickly. Set thresholds and alerts so problems surface early.
+
+**What good looks like:** logging on critical systems, alerts that go to a named team, defined thresholds for what triggers action, and evidence that alerts are actually reviewed and acted on.
+
+### 3.4 Respond and recover (Art. 11 and 12)
+
+Have a business continuity policy, response and recovery plans, and recovery targets (RTO and RPO) for your important functions. Back up your data, keep backups separate from the live systems, and test that you can actually restore.
+
+**What good looks like:** each critical function has an agreed RTO and RPO signed off by the business, plans that name who does what, and test reports proving a real restore worked inside the target time. Backups are isolated so that one ransomware attack cannot destroy both the live data and the backup.
+
+**Sample RTO and RPO tiering:**
+
+| Tier | Example functions | RTO (max downtime) | RPO (max data loss) |
+|------|-------------------|--------------------|---------------------|
+| 1 - Critical | Payments, trading, customer access | 2 hours | 15 minutes |
+| 2 - Important | Reporting, reconciliation | 8 hours | 4 hours |
+| 3 - Standard | Internal admin tools | 48 hours | 24 hours |
+
+These numbers are examples. Set your own based on real business impact, then prove them by testing.
+
+### 3.5 Learn (Art. 13 and 14)
+
+After incidents, find the root cause and fix the underlying weakness. Take in threat intelligence. Train your staff and your board. Have a crisis communication plan for telling clients, partners, and the public when needed.
+
+**What good looks like:** every significant incident has a written review with actions that are tracked to closure, and training completion is recorded, including for the board.
 
 ## 4. Control objectives
 
 | ID | Control objective |
 |----|-------------------|
-| RM-01 | A board-approved digital operational resilience strategy defines risk tolerance and objectives. |
-| RM-02 | A complete, current inventory of business functions, information assets, ICT assets and interdependencies is maintained. |
-| RM-03 | ICT risks are identified and assessed on a continuous basis and upon major change. |
-| RM-04 | An information security policy and supporting controls (IAM, encryption, network, change, patch) are implemented and enforced. |
-| RM-05 | Detection mechanisms with defined thresholds identify anomalies and incidents promptly. |
-| RM-06 | ICT business continuity and response/recovery plans exist, with defined RTO/RPO, and are tested. |
-| RM-07 | Backups are policy-driven, segregated, and restoration is periodically tested. |
-| RM-08 | Post-incident reviews and threat intelligence feed continuous improvement. |
-| RM-09 | Security awareness and resilience training programmes operate for all staff and the management body. |
-| RM-10 | The framework is reviewed at least annually and after major incidents. |
+| RM-01 | A board-approved resilience strategy defines risk appetite and objectives. |
+| RM-02 | A complete, current inventory of functions, assets and dependencies is maintained. |
+| RM-03 | ICT risks are assessed regularly and on major change. |
+| RM-04 | An information security policy and supporting controls are implemented and enforced. |
+| RM-05 | Detection with defined thresholds identifies anomalies and incidents promptly. |
+| RM-06 | Continuity and recovery plans exist with tested RTO and RPO. |
+| RM-07 | Backups are segregated and restoration is tested. |
+| RM-08 | Post-incident reviews and threat intelligence drive improvement. |
+| RM-09 | Awareness and resilience training runs for all staff and the board. |
+| RM-10 | The framework is reviewed at least yearly and after major incidents. |
 
-## 5. Implementation steps
+## 5. How to implement, in order
 
-1. **Draft the resilience strategy** with explicit risk tolerance/appetite statements and objectives; obtain board approval.
-2. **Build the asset & dependency inventory** (link to the ICT asset register template). Classify by criticality and map to business functions and third parties.
-3. **Run the initial risk assessment** across the estate; establish a repeatable methodology and register.
-4. **Codify the information security policy** and the underlying control standards (IAM, cryptography, network segmentation, secure configuration, vulnerability & patch management, change management).
-5. **Stand up detection & monitoring** (logging, SIEM/monitoring, alerting thresholds, use cases).
-6. **Build BC/DR capability**: define RTO/RPO per critical function, document response & recovery plans, establish redundancy, and schedule tests.
-7. **Implement backup regime**: policy, frequency by criticality, segregation, and periodic restore testing.
-8. **Establish the learning loop**: threat-intel intake, post-incident reviews, lessons-learned tracking, and metrics.
-9. **Roll out awareness & training** with role-based content and completion tracking.
-10. **Institutionalise annual review** and event-driven updates of the whole framework.
+This is a suggested sequence. Do the early steps first because later steps depend on them.
 
-## 6. Evidence to retain
+1. **Weeks 1 to 4:** Draft the resilience strategy and get the board to approve ownership and risk appetite.
+2. **Weeks 2 to 8:** Build the asset and dependency inventory. Start with critical functions.
+3. **Weeks 6 to 12:** Run the first risk assessment using a repeatable method.
+4. **Weeks 8 to 16:** Write and roll out the information security control standards.
+5. **Weeks 10 to 18:** Set up detection, logging, and alerting on critical systems.
+6. **Weeks 12 to 20:** Define RTO and RPO, write recovery plans, and schedule a restore test.
+7. **Weeks 16 to 24:** Set up the backup regime and run a real restore test.
+8. **Ongoing:** Post-incident reviews, threat intelligence, training, and the yearly framework review.
 
-- Approved resilience strategy and ICT risk framework document (versioned).
-- Asset/dependency inventory extract and classification methodology.
-- Risk assessment methodology and current risk register.
-- Information security policy and control standards.
-- Monitoring/alerting configuration and sample alerts.
-- BC/DR plans, RTO/RPO definitions, and test reports.
-- Backup policy and restore-test evidence.
-- Post-incident review reports and lessons-learned log.
-- Training completion records.
-- Annual review minutes/change history.
+## 6. Sample artifact: a filled-in risk register row
 
-## 7. Common pitfalls
+| Risk ID | Risk | Affected function | Likelihood | Impact | Current controls | Rating | Owner | Action |
+|---------|------|-------------------|-----------|--------|------------------|--------|-------|--------|
+| R-011 | Ransomware encrypts core banking data | Customer accounts | Medium | Severe | Segregated backups, EDR, MFA | High | CISO | Test restore quarterly; tabletop exercise |
 
-- Incomplete asset inventory (shadow IT, undocumented dependencies, missing third-party links).
-- RTO/RPO defined on paper but never validated by testing.
-- Backups not segregated (vulnerable to the same ransomware event as production).
-- "Annual review" that is a rubber stamp rather than a genuine reassessment.
-- Training that is generic rather than role-based and risk-relevant.
+## 7. Evidence to keep
+
+Approved strategy and framework (with version history), asset inventory extract, risk method and register, security policy and standards, alert configuration and sample alerts, continuity plans with RTO and RPO, restore-test reports, post-incident reviews, training records, and the annual review minutes.
+
+## 8. Common mistakes
+
+- An asset inventory that misses shadow IT, hidden dependencies, or third-party links.
+- RTO and RPO written on paper but never proven by a real restore test.
+- Backups that sit on the same network as production, so one attack destroys both.
+- An "annual review" that is a rubber stamp, not a real reassessment.
+- Generic training instead of role-based training that matches real risk.
+
+## 9. Quick self-check
+
+- Can you produce, in one hour, a list of your critical functions and the systems behind them? If not, start with the inventory.
+- Have you ever proven, with a report, that you can restore a critical system inside its RTO? If not, that is your top priority.
+- Did the board approve the framework this year, with minutes to show it? If not, fix the governance gap first.
