@@ -1,64 +1,67 @@
-# Sampling & Evidence Guidance
+# Sampling and Evidence Guidance
 
-Guidance for sizing samples, selecting items, and evaluating evidence when executing the [audit test procedures](test-procedures.md). Adapt to your organisation's audit methodology and risk appetite; this is a pragmatic default, not a prescriptive standard.
+How to size samples, pick items to test, and judge evidence when you run the audit test procedures. Adapt this to your own audit method and risk appetite. It is a sensible default, not a strict standard.
 
----
+Version note: this file describes method only. It does not depend on any specific RTS or ITS numbers. Confirm the RTS and ITS versions in force for your audit period in the engagement scope.
 
 ## 1. Types of testing
 
-- **Inquiry** — interviews and walkthroughs. Corroborate; never rely on inquiry alone.
-- **Inspection** — examine documents, configurations, records.
-- **Observation** — watch a process being performed.
-- **Re-performance** — independently re-execute the control (strongest evidence).
+There are four ways to get evidence, from weakest to strongest:
 
-Prefer re-performance and inspection for high-risk controls; inquiry plus observation may suffice for low-risk ones.
+- Inquiry: interviews and walkthroughs. Always back it up with something else. Never rely on inquiry alone.
+- Inspection: look at documents, settings, and records.
+- Observation: watch a process being done.
+- Re-performance: do the control again yourself. This is the strongest evidence.
 
-## 2. Full-population vs sample
+Use re-performance and inspection for high-risk controls. Inquiry plus observation can be enough for low-risk ones.
 
-Some DORA controls should be tested on the **whole population**, not a sample, because each item carries regulatory weight:
+## 2. Whole population or a sample
 
-- **All major incidents** in the period (reporting timeliness and completeness — INC-04/05).
-- **All critical/important functions** for BC/DR, RTO/RPO and testing coverage.
-- **All contracts supporting critical/important functions** for mandatory/enhanced clauses.
-- **All TLPT engagements** in the cycle (if in scope).
+Some DORA controls should be tested on the whole population, not a sample, because each item carries regulatory weight:
 
-For higher-volume, lower-individual-risk populations (e.g. change tickets, patch records, access reviews), use sampling.
+- All major incidents in the period (reporting timeliness and content, controls INC-04 and INC-05).
+- All critical or important functions for continuity, recovery, RTO, RPO, and test coverage.
+- All contracts behind critical or important functions, for the required and enhanced clauses.
+- All TLPT engagements in the cycle (if you are in scope).
 
-## 3. Indicative sample sizes for attribute testing
+For higher-volume, lower-risk populations (for example change tickets, patch records, access reviews), sampling is fine.
 
-| Control frequency | Population | Indicative sample |
-|-------------------|-----------|-------------------|
-| Annual | 1 | 1 (the instance) |
+## 3. Suggested sample sizes for attribute testing
+
+| Control frequency | Population | Suggested sample |
+|---|---|---|
+| Annual | 1 | 1 (the one instance) |
 | Quarterly | 4 | 2 |
-| Monthly | 12 | 2-4 |
-| Weekly | ~52 | 5-8 |
-| Daily | ~250 | 15-25 |
-| Many times per day / continuous | large | 25-40 |
+| Monthly | 12 | 2 to 4 |
+| Weekly | about 52 | 5 to 8 |
+| Daily | about 250 | 15 to 25 |
+| Many times a day or continuous | large | 25 to 40 |
 
-These are typical internal-audit defaults; increase the sample if the control is high-risk, if you expect exceptions, or if prior testing found issues.
+These are typical internal-audit defaults. Increase the sample if the control is high-risk, if you expect exceptions, or if past testing found problems.
 
-## 4. Selection method
+## 4. How to pick the items
 
-- Prefer **random or systematic** selection for representativeness.
-- Add **risk-based / judgmental** selections for the highest-criticality items (e.g. the largest third parties, the most critical systems, the highest-severity incidents).
-- Document the population source, its completeness check, the selection method, and the seed/criteria.
+- Prefer random or systematic selection so the sample represents the population.
+- Add some risk-based picks for the highest-risk items (for example the largest third parties, the most critical systems, the highest-severity incidents).
+- Write down the population source, how you checked it was complete, how you selected items, and the criteria you used.
 
-## 5. Evaluating exceptions
+## 5. Judging exceptions
 
-1. Determine whether each exception is a **control exception** (control did not operate) or a data/documentation issue.
-2. Assess whether it is **isolated** or **systemic** (extend testing if systemic).
-3. Consider the **regulatory consequence** — a single missed major-incident reporting deadline is a significant finding regardless of sample rate.
-4. Project the exception rate where appropriate and conclude on operating effectiveness.
+- Decide if each exception is a control failure (the control did not work) or just a paperwork issue.
+- Decide if it is a one-off or a pattern. If it looks systemic, test more.
+- Think about the regulatory effect. A single missed major-incident deadline is a serious finding no matter how small the sample rate looks.
+- Where it helps, project the error rate across the population, then conclude on whether the control is effective.
 
-## 6. Evidence quality & retention
+## 6. Evidence quality and retention
 
-- Prefer evidence that is **objective, dated, and independently generated** (system logs, timestamps, authority acknowledgements) over management assertions.
-- Record for each test: control ref, procedure performed, population, sample, items examined, results, exceptions, conclusion, preparer, reviewer, date.
-- Retain workpapers and source evidence in line with your audit methodology and DORA record-keeping expectations.
+- Prefer evidence that is objective, dated, and produced independently (system logs, timestamps, regulator acknowledgements) over what management simply tells you.
+- For each test, record: the control reference, what you did, the population, the sample, the items you looked at, the results, any exceptions, your conclusion, who prepared it, who reviewed it, and the date.
+- Keep your working papers and source evidence in line with your audit method and DORA record-keeping expectations.
 
-## 7. Completeness of populations
+## 7. Checking a population is complete
 
-The reliability of sampling depends on population completeness. For each population, perform an independent completeness check, e.g.:
-- **Incidents** — reconcile the incident register to monitoring/alerting logs and service-desk tickets.
-- **Third parties** — reconcile the register of information to accounts-payable and cloud/SaaS inventories.
-- **Critical systems** — reconcile to the ICT asset inventory and business-function mapping.
+Sampling is only reliable if the population is complete. For each population, do an independent completeness check, for example:
+
+- Incidents: reconcile the incident register to monitoring and alerting logs and to service-desk tickets.
+- Third parties: reconcile the register of information to accounts-payable data and cloud or SaaS inventories.
+- Critical systems: reconcile to the ICT asset inventory and the business-function map.
