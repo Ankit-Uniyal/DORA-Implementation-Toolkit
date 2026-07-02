@@ -26,7 +26,6 @@ New to DORA? Start with the **[Glossary](docs/glossary.md)**, then the **[Propor
 | Understand the words | [Glossary](docs/glossary.md) |
 | Know how much applies to you | [Proportionality guide](docs/proportionality-guide.md) |
 | Plan the build | [Implementation roadmap](docs/implementation-roadmap.md) |
-| See standards that pair with DORA | [Related standards and mapping](docs/related-standards-and-mapping.md) |
 
 
 ## Who is in scope?
@@ -49,3 +48,22 @@ DORA applies to a wide set of **financial entities** (banks, payment and e-money
 
 
 Each guide follows the same shape: what it is really about, the requirements in plain English, what good and weak look like, control objectives, an ordered how-to, sample filled-in artifacts, evidence to keep, common mistakes, and a quick self-check.
+
+
+## Repository structure
+
+```
+DORA-Implementation-Toolkit/
+├── README.md
+├── docs/
+│   ├── glossary.md
+│   ├── proportionality-guide.md
+│   ├── implementation-roadmap.md
+│   ├── implementation/        # In-depth playbook per pillar plus governance
+│   ├── gap-assessment/        # Maturity model, questionnaire, control mapping
+│   │                          #   (control mapping also holds the standards-to-DORA mapping)
+│   └── audit/                 # Test procedures, sampling, findings template
+└── templates/                 # Reusable registers and working templates
+```
+
+Related standards and frameworks (ISO/IEC 27001, 22301, 27017, EBA guidelines, TIBER-EU, NIST CSF, and more) and how they map to each DORA pillar are covered at the end of [docs/gap-assessment/control-mapping.md](docs/gap-assessment/control-mapping.md).
