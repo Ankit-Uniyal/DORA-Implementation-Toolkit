@@ -1,99 +1,299 @@
 # DORA Self-Assessment Questionnaire
 
-A pillar-by-pillar questionnaire for self-assessment and gap analysis. Score each question **0–5** using the [maturity model](maturity-model.md). Record evidence and gaps in the last columns. Aim for **Level 3+** on every control; Level 4+ on critical items.
+A deeper questionnaire for gap analysis. Each control is broken into small, testable sub-questions so the score is based on real evidence, not a gut feel. Read the [maturity model](maturity-model.md) first, then follow the scoring rule below.
 
-> How to use: copy this table into a spreadsheet if you prefer, or fill the Score/Evidence/Gap columns directly in a fork. Then roll scores up per pillar and prioritise gaps.
+**Read first:** [Glossary](../glossary.md).
 
 ---
 
-## Pillar 0 — Governance & Proportionality
+## How to score (the rule)
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| GOV-01 | Has the management body formally approved the ICT risk management framework, and is it reviewed at least annually? | | | |
-| GOV-02 | Are ICT risk roles, responsibilities and accountability documented (e.g. RACI) and communicated? | | | |
-| GOV-03 | Does the board receive regular ICT risk reporting with evidence of challenge/oversight? | | | |
-| GOV-04 | Do management-body members complete role-appropriate ICT resilience training? | | | |
-| GOV-05 | Is an adequate ICT resilience budget allocated and reviewed? | | | |
-| GOV-06 | Is the proportionality tier (and simplified-framework eligibility) assessed and documented? | | | |
-| GOV-07 | Is a three-lines-of-defence model defined, with internal audit independently covering ICT? | | | |
+For each control:
 
-## Pillar 1 — ICT Risk Management
+1. Answer every sub-question with **Yes**, **Partly**, or **No**, and note the evidence.
+2. Turn the answers into a 0 to 5 maturity score using this rule:
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| RM-01 | Is there a board-approved digital operational resilience strategy with risk tolerance and objectives? | | | |
-| RM-02 | Is a complete, current inventory of business functions, information/ICT assets and interdependencies maintained? | | | |
-| RM-03 | Are ICT risks identified/assessed continuously and upon major change? | | | |
-| RM-04 | Is an information security policy implemented (IAM, encryption, network, change, patch)? | | | |
-| RM-05 | Are detection mechanisms with defined thresholds in place to identify anomalies/incidents promptly? | | | |
-| RM-06 | Do BC/DR and response/recovery plans exist with defined RTO/RPO, and are they tested? | | | |
-| RM-07 | Are backups policy-driven, segregated, and is restoration periodically tested? | | | |
-| RM-08 | Do post-incident reviews and threat intelligence feed continuous improvement? | | | |
-| RM-09 | Do security awareness and resilience training programmes operate for all staff and the board? | | | |
-| RM-10 | Is the framework reviewed at least annually and after major incidents? | | | |
+- **0** = No to all sub-questions. Nothing exists.
+- **1** = Yes or Partly to only the "is it documented" type question. It exists on paper only.
+- **2** = The control is documented and partly working, but not consistent or complete.
+- **3** = Yes to all "documented", "owned", and "operating" sub-questions, with evidence. This is the minimum to call the control compliant.
+- **4** = Level 3 plus it is measured (metrics or KPIs) and reviewed regularly.
+- **5** = Level 4 plus it is continuously improved using data, threat intelligence, and lessons learned.
 
-## Pillar 2 — Incident Management, Classification & Reporting
+3. If any sub-question marked **(legal)** is answered No or Partly, flag the control as a **breach risk**, not just a low score. See the note below.
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| INC-01 | Is there a documented incident management process (detect, log, categorise, escalate, close)? | | | |
-| INC-02 | Does incident classification apply the DORA/RTS criteria and thresholds consistently? | | | |
-| INC-03 | Are roles, responsibilities and an escalation/on-call matrix defined and tested? | | | |
-| INC-04 | Can major incidents be reported to the authority within the initial/intermediate/final deadlines? | | | |
-| INC-05 | Does reporting content align to the ITS templates and is it complete/accurate? | | | |
-| INC-06 | Are affected clients informed without undue delay, with protective guidance? | | | |
-| INC-07 | Are significant cyber threats assessed for voluntary notification? | | | |
-| INC-08 | Does root-cause analysis feed lessons learned and framework updates? | | | |
-| INC-09 | Are payment-related operational/security incidents captured where applicable? | | | |
+> **Maturity is not the same as legal compliance.** Some duties are hard legal lines, not a maturity journey. Reporting a major incident late, or not reporting it, is a breach even if your process is otherwise mature. Sub-questions marked **(legal)** are pass or fail duties. A No there means "act now", regardless of the overall score.
 
-## Pillar 3 — Digital Operational Resilience Testing
+---
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| TST-01 | Is there a documented, risk-based resilience testing programme, reviewed periodically? | | | |
-| TST-02 | Are all critical ICT systems and applications tested at least annually? | | | |
-| TST-03 | Does testing use an appropriate mix of techniques proportionate to risk? | | | |
-| TST-04 | Are testers independent and appropriately qualified, with conflicts managed? | | | |
-| TST-05 | Are findings prioritised, classified, remediated and re-validated? | | | |
-| TST-06 | If in scope, is TLPT conducted at least every three years on production critical/important functions? | | | |
-| TST-07 | Are in-scope ICT third parties included in TLPT (or via pooled testing)? | | | |
-| TST-08 | Is TLPT conducted per the RTS/TIBER-EU methodology with authority validation/attestation? | | | |
+## Pillar 0 - Governance
 
-## Pillar 4 — ICT Third-Party Risk Management
+### GOV-01 Framework approved and reviewed
+- Is the ICT risk framework written down?
+- Did the board formally approve it, with minutes? **(legal)**
+- Was it reviewed in the last 12 months, or after the last major incident?
+- Score (0-5): ___  Evidence: ___
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| TPP-01 | Is there a board-approved third-party strategy and a policy on services supporting critical/important functions? | | | |
-| TPP-02 | Is a complete register of information maintained, flagging critical/important functions? | | | |
-| TPP-03 | Does pre-contract due diligence assess risk, criticality, concentration and conflicts of interest? | | | |
-| TPP-04 | Do contracts contain all mandatory provisions, with enhanced provisions for critical/important functions? | | | |
-| TPP-05 | Are audit, access and inspection rights secured and exercised on a risk basis? | | | |
-| TPP-06 | Are concentration and sub-outsourcing risks assessed and monitored? | | | |
-| TPP-07 | Do documented, tested exit strategies exist for critical/important functions? | | | |
-| TPP-08 | Are CTPP designations tracked and reflected in risk management? | | | |
-| TPP-09 | Is the register reported to the competent authority at least annually? | | | |
+### GOV-02 Roles and accountability
+- Are ICT risk roles and accountability documented (for example a RACI)?
+- Does every key activity have exactly one accountable owner?
+- Do the named people know and accept their role (confirmed by interview)?
+- Score (0-5): ___  Evidence: ___
 
-## Pillar 5 — Information & Intelligence Sharing
+### GOV-03 Board oversight
+- Does the board get ICT risk reporting on a regular schedule?
+- Does the reporting show real challenge and decisions, not just "noted"?
+- Are actions from the board tracked to closure?
+- Score (0-5): ___  Evidence: ___
 
-| Ref | Question | Score (0-5) | Evidence | Gap / Action |
-|-----|----------|-------------|----------|--------------|
-| ISH-01 | Is the decision on participation in threat-intelligence sharing documented and risk-based? | | | |
-| ISH-02 | Does sharing occur within trusted communities under formal arrangements? | | | |
-| ISH-03 | Do arrangements protect confidentiality, personal data (GDPR) and comply with competition rules? | | | |
-| ISH-04 | Is the competent authority notified of joining/leaving an arrangement? | | | |
-| ISH-05 | Is shared intelligence operationally integrated into detection and response? | | | |
+### GOV-04 Board training
+- Is there a training plan for the board on ICT resilience?
+- Have board members actually completed it, with records?
+- Score (0-5): ___  Evidence: ___
+
+### GOV-05 Resilience budget
+- Is there a defined budget for resilience?
+- Does the board review it at least yearly?
+- Score (0-5): ___  Evidence: ___
+
+### GOV-06 Proportionality assessed
+- Is there a written proportionality assessment?
+- Does it state whether the full or simplified framework applies, and why?
+- Is it reviewed when the firm changes materially?
+- Score (0-5): ___  Evidence: ___
+
+### GOV-07 Three lines and audit
+- Is a three-lines-of-defence model defined?
+- Does internal audit cover ICT risk independently, on a plan?
+- Score (0-5): ___  Evidence: ___
+
+## Pillar 1 - ICT Risk Management
+
+### RM-01 Resilience strategy
+- Is there a written resilience strategy with risk appetite and objectives?
+- Did the board approve it?
+- Score (0-5): ___  Evidence: ___
+
+### RM-02 Asset and dependency inventory
+- Is there an inventory of functions, information assets, and ICT assets?
+- Are dependencies and third-party links recorded?
+- Is it reconciled to reality regularly (to catch shadow IT)?
+- Is each critical asset linked to its function, owner, and recovery targets?
+- Score (0-5): ___  Evidence: ___
+
+### RM-03 Risk assessment
+- Is there a repeatable risk assessment method?
+- Is a current risk register maintained?
+- Are risks reassessed on major change?
+- Score (0-5): ___  Evidence: ___
+
+### RM-04 Information security controls
+- Is there an information security policy and control standards?
+- Are key controls (access, MFA, encryption, patching, change) actually operating?
+- Is operation checked, not just assumed?
+- Score (0-5): ___  Evidence: ___
+
+### RM-05 Detection
+- Is logging in place on critical systems?
+- Are there defined alert thresholds and a named team that acts on alerts?
+- Score (0-5): ___  Evidence: ___
+
+### RM-06 Continuity and recovery
+- Do critical functions have agreed RTO and RPO?
+- Do response and recovery plans name who does what?
+- Has a real test proven recovery inside the RTO?
+- Score (0-5): ___  Evidence: ___
+
+### RM-07 Backups
+- Is there a backup policy with frequency by criticality?
+- Are backups kept separate from live systems?
+- Has a real restore been tested in the period?
+- Score (0-5): ___  Evidence: ___
+
+### RM-08 Learning
+- Are post-incident reviews done for significant incidents?
+- Are actions tracked to closure and fed back into controls?
+- Is threat intelligence taken in and used?
+- Score (0-5): ___  Evidence: ___
+
+### RM-09 Training
+- Is there role-based ICT resilience training for staff?
+- Is completion recorded, including for the board?
+- Score (0-5): ___  Evidence: ___
+
+### RM-10 Framework review
+- Was the framework reviewed in the last 12 months?
+- Was it also reviewed after any major incident?
+- Score (0-5): ___  Evidence: ___
+
+## Pillar 2 - Incident Management and Reporting
+
+### INC-01 Incident process
+- Is there a documented end-to-end incident process?
+- Does it define severity levels, escalation, and closure?
+- Score (0-5): ___  Evidence: ___
+
+### INC-02 Classification
+- Is there a classification aid using the DORA and RTS criteria?
+- Are the current RTS thresholds filled in? **(legal)**
+- Is classification applied consistently, shown by worked examples?
+- Score (0-5): ___  Evidence: ___
+
+### INC-03 Roles and escalation
+- Is there an on-call and escalation matrix?
+- Has it been tested (for example by an exercise)?
+- Score (0-5): ___  Evidence: ___
+
+### INC-04 Reporting timeliness
+- Is the reporting owner pre-assigned, with a backup?
+- Are the current ITS deadlines built into the runbook? **(legal)**
+- For every major incident in the period, were initial, intermediate, and final reports on time? **(legal)**
+- Has a timed exercise proven you can meet the first deadline?
+- Score (0-5): ___  Evidence: ___
+
+### INC-05 Reporting content
+- Do reports match the ITS template fields? **(legal)**
+- Are they complete and accurate?
+- Score (0-5): ___  Evidence: ___
+
+### INC-06 Client notification
+- Are affected clients told without undue delay? **(legal)**
+- Are they given protective advice?
+- Score (0-5): ___  Evidence: ___
+
+### INC-07 Threat notification
+- Is there a process to assess significant cyber threats for voluntary notification?
+- Score (0-5): ___  Evidence: ___
+
+### INC-08 Lessons learned
+- Is root-cause analysis done and tracked to closure?
+- Score (0-5): ___  Evidence: ___
+
+### INC-09 Payment incidents
+- Are payment-related operational and security incidents captured under the same regime? **(legal, if applicable)**
+- Score (0-5): ___  Evidence: ___
+
+## Pillar 3 - Resilience Testing
+
+### TST-01 Testing programme
+- Is there a documented, risk-based testing programme?
+- Is it reviewed periodically?
+- Score (0-5): ___  Evidence: ___
+
+### TST-02 Critical systems tested
+- Is there a test calendar covering all critical systems?
+- Was every critical system tested in the last 12 months? **(legal)**
+- Score (0-5): ___  Evidence: ___
+
+### TST-03 Mix of methods
+- Does testing use a suitable mix of methods for each system's risk?
+- Score (0-5): ___  Evidence: ___
+
+### TST-04 Tester independence
+- Are testers independent of those who built the systems?
+- Are they qualified, and (if external) insured?
+- Score (0-5): ___  Evidence: ___
+
+### TST-05 Findings fixed
+- Are findings prioritised and assigned owners and deadlines?
+- Are fixes re-tested and verified?
+- Score (0-5): ___  Evidence: ___
+
+### TST-06 TLPT (if named)
+- If named, is TLPT run at least every three years on production critical functions? **(legal, if in scope)**
+- Score (0-5): ___  Evidence: ___
+
+### TST-07 Third parties in TLPT
+- Are in-scope third parties included in TLPT, or via pooled testing?
+- Score (0-5): ___  Evidence: ___
+
+### TST-08 TLPT method and attestation
+- Does TLPT follow the RTS and TIBER-EU, with regulator validation?
+- Is the attestation held? **(legal, if in scope)**
+- Score (0-5): ___  Evidence: ___
+
+## Pillar 4 - Third-Party Risk
+
+### TPP-01 Strategy and policy
+- Is there a board-approved third-party strategy?
+- Is there a policy for services supporting critical functions?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-02 Register of information
+- Does a register of information exist?
+- Is it reconciled to actual spend, cloud, and SaaS (completeness)?
+- Are critical or important functions flagged?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-03 Due diligence
+- Is pre-contract due diligence done?
+- Does it cover risk, criticality, concentration, and conflicts?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-04 Contract terms
+- Do contracts hold all required base terms? **(legal)**
+- Do critical-function contracts hold the enhanced terms (audit rights, TLPT cooperation, exit)? **(legal)**
+- Score (0-5): ___  Evidence: ___
+
+### TPP-05 Audit rights
+- Are audit, access, and inspection rights secured in contracts?
+- Are they used on a risk basis?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-06 Concentration and sub-outsourcing
+- Is concentration risk assessed?
+- Are sub-outsourcing chains identified and monitored?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-07 Exit strategies
+- Do critical functions have written exit strategies?
+- Have they been tested for feasibility?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-08 CTPP tracking
+- Is it tracked whether providers are CTPPs?
+- Is that reflected in risk management?
+- Score (0-5): ___  Evidence: ___
+
+### TPP-09 Regulatory reporting
+- Is the register reported to the regulator at least yearly? **(legal)**
+- Score (0-5): ___  Evidence: ___
+
+## Pillar 5 - Information Sharing
+
+### ISH-01 Participation decision
+- Is the decision to take part (or not) written down and risk-based?
+- Score (0-5): ___  Evidence: ___
+
+### ISH-02 Trusted communities
+- Does sharing happen in trusted communities under a formal arrangement?
+- Score (0-5): ___  Evidence: ___
+
+### ISH-03 Safeguards
+- Does the arrangement protect confidentiality, personal data (GDPR), and competition rules?
+- Was it reviewed by legal and the DPO?
+- Score (0-5): ___  Evidence: ___
+
+### ISH-04 Regulator notified
+- Is the regulator told when you join or leave? **(legal, if participating)**
+- Score (0-5): ___  Evidence: ___
+
+### ISH-05 Intelligence used
+- Is received intelligence fed into detection and response?
+- Score (0-5): ___  Evidence: ___
 
 ---
 
 ## Scoring summary
 
-| Pillar | Controls | Average score | Target | Gaps (P1/P2) |
-|--------|----------|---------------|--------|--------------|
-| 0 — Governance | 7 | | 3.0 | |
-| 1 — ICT risk management | 10 | | 3.0 | |
-| 2 — Incident management | 9 | | 3.0 | |
-| 3 — Resilience testing | 8 | | 3.0 | |
-| 4 — Third-party risk | 9 | | 3.0 | |
-| 5 — Information sharing | 5 | | 3.0 | |
+| Pillar | Controls | Average score | Target | Any breach-risk flags? |
+|--------|----------|---------------|--------|------------------------|
+| 0 - Governance | 7 | | 3.0 | |
+| 1 - ICT risk management | 10 | | 3.0 | |
+| 2 - Incident management | 9 | | 3.0 | |
+| 3 - Resilience testing | 8 | | 3.0 | |
+| 4 - Third-party risk | 9 | | 3.0 | |
+| 5 - Information sharing | 5 | | 3.0 | |
 | **Overall** | **48** | | **3.0** | |
+
+**How to read the summary.** The average score shows overall maturity. The breach-risk column matters more: any control with a **(legal)** sub-question failing must go straight to the top of the remediation list, even if its number looks acceptable.
