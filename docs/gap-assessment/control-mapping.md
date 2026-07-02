@@ -1,10 +1,14 @@
 # Control-to-Requirement Mapping
 
+
 This matrix links each toolkit control to the relevant DORA articles and, where useful, the supplementing RTS or ITS. Use it to show coverage, to check evidence is complete, and to plan audit sampling.
+
 
 Article numbers are indicative, based on Regulation (EU) 2022/2554 as published. RTS and ITS references are described in plain terms because their final numbering and dates should be confirmed on EUR-Lex and the ESA websites.
 
+
 ## Pillar 0: Governance and Proportionality
+
 
 | Control | DORA article(s) | Supplementing standards | Primary evidence |
 |---|---|---|---|
@@ -16,7 +20,9 @@ Article numbers are indicative, based on Regulation (EU) 2022/2554 as published.
 | GOV-06 | Art. 4, 16 | RTS on simplified ICT risk management framework | Proportionality assessment |
 | GOV-07 | Art. 6(4), 5(2) | | Audit plan; terms of reference |
 
+
 ## Pillar 1: ICT Risk Management
+
 
 | Control | DORA article(s) | Supplementing standards | Primary evidence |
 |---|---|---|---|
@@ -31,7 +37,9 @@ Article numbers are indicative, based on Regulation (EU) 2022/2554 as published.
 | RM-09 | Art. 13(6) | | Training completion records |
 | RM-10 | Art. 6(5) | | Annual review minutes |
 
+
 ## Pillar 2: Incident Management, Classification and Reporting
+
 
 | Control | DORA article(s) | Supplementing standards | Primary evidence |
 |---|---|---|---|
@@ -42,48 +50,78 @@ Article numbers are indicative, based on Regulation (EU) 2022/2554 as published.
 | INC-05 | Art. 20 | ITS on reporting content and templates | Submitted report forms |
 | INC-06 | Art. 19(3) | | Client notification records |
 | INC-07 | Art. 19(2) | | Threat-notification triage records |
-| INC-08 | Art. 13(2) | | Root-cause analysis reports |
-| INC-09 | Art. 23 | | Payment incident records |
 
-## Pillar 3: Digital Operational Resilience Testing
 
-| Control | DORA article(s) | Supplementing standards | Primary evidence |
+## Related standards and frameworks: how they map to DORA
+
+DORA tells you what outcomes to achieve, but it does not hand you a full control library or test method. The standards below fill that gap. If you already run one or more of them well, most of your DORA evidence already exists. Your job is to link that existing work to DORA's pillars and prove it.
+
+Important: DORA is the law and standards are helpers. Being certified to a standard does not make you DORA compliant on its own, and DORA can ask for more than a standard does. Use standards to build and evidence controls, then check the result against DORA and its RTS and ITS. Standards get revised over time, so confirm the current version before you rely on any mapping.
+
+### The shortlist (best coverage in a European setting)
+
+- ISO/IEC 27001 and 27002: information security management and controls.
+- ISO/IEC 22301: business continuity.
+- ISO/IEC 27017 and 27018: cloud security and personal data in the cloud.
+- EBA Guidelines on ICT and security risk management, and on outsourcing.
+- TIBER-EU: threat-led red team testing (the base for DORA's TLPT).
+- NIST Cybersecurity Framework: a clean way to organise the whole programme.
+
+### Standard profiles (what it is, how it helps DORA, where it stops)
+
+| Standard | What it is | How it helps DORA | Where it stops |
 |---|---|---|---|
-| TST-01 | Art. 24 | | Testing programme |
-| TST-02 | Art. 24(6), 25 | | Test calendar; test reports |
-| TST-03 | Art. 25 | | Test method catalogue |
-| TST-04 | Art. 24(5), 27 | RTS on TLPT | Tester independence and qualification |
-| TST-05 | Art. 24(4) | | Findings register; re-test evidence |
-| TST-06 | Art. 26 | RTS on TLPT (TIBER-EU) | TLPT reports |
-| TST-07 | Art. 26(3) | RTS on TLPT | Third-party TLPT scope; pooled-test docs |
-| TST-08 | Art. 26, 27 | RTS on TLPT | Authority validation; attestation |
+| ISO/IEC 27001 and 27002 | ISMS and security control catalogue | Backbone for Pillar 1 protect and much of detect | No incident deadlines, register format, or TLPT |
+| ISO/IEC 27005 | Information security risk method | Repeatable risk method for Pillar 1 (RM-03) | Method only, not a control set |
+| ISO/IEC 22301 and 27031 | Business continuity and ICT readiness | Pillar 1 respond and recover, RTO and RPO (RM-06) | Not DORA classification or reporting duties |
+| ISO/IEC 27017 and 27018 | Cloud security and cloud personal data | Pillar 4 provider assessment; Pillar 1 protect in cloud | Not contract terms, register, or exit testing |
+| ISO/IEC 27036 | Supplier relationship security | Pillar 4 due diligence and monitoring | Not the register format or CTPP oversight |
+| ISO/IEC 27035 | Incident management | Pillar 2 incident handling process | Not the DORA reporting deadlines |
+| EBA ICT and security risk guidelines | Supervisory guidance | Depth for Pillars 0, 1, and 2 | DORA takes precedence where they overlap |
+| EBA outsourcing guidelines | Supervisory guidance | Strong support for Pillar 4 | DORA Art. 28 to 44 and the register ITS are binding |
+| TIBER-EU | EU threat-led red team framework | The base for DORA TLPT (Pillar 3, Art. 26 and 27) | Advanced testing only, only for named firms |
+| NIS2 | EU network and information security directive | Sits next to DORA in the EU cyber landscape | DORA is lex specialis for financial entities |
+| GDPR | EU personal data law | Pillar 2 client notices, Pillar 4 data locations, Pillar 5 safeguards | Governs personal data, not resilience overall |
+| NIST CSF | Identify, Protect, Detect, Respond, Recover | Lines up with DORA's five jobs in Pillar 1 | US-origin, no EU-specific duties |
+| COBIT | IT governance framework | Pillar 0 governance, roles, and oversight | Governance-focused, not a control set |
+| OWASP and PTES | Testing method and standards | Pillar 3 baseline testing depth | Testing methods, not management systems |
+| MITRE ATT&CK | Attacker tactics knowledge base | Pillar 3 TLPT scenarios; Pillar 5 threat sharing | A reference, not a process framework |
+| SOC 2 and ISAE 3402 | Independent assurance reports | Pillar 4 provider evidence where direct audit is hard | You still need DORA terms, audit rights, exit tests |
 
-## Pillar 4: ICT Third-Party Risk Management
+### Pillar-by-pillar mapping
 
-| Control | DORA article(s) | Supplementing standards | Primary evidence |
-|---|---|---|---|
-| TPP-01 | Art. 28(2) | RTS and ITS on policy for ICT services | Third-party strategy and policy |
-| TPP-02 | Art. 28(3) | ITS on register of information | Register of information |
-| TPP-03 | Art. 28(4) to (8), 29 | | Due-diligence assessments |
-| TPP-04 | Art. 30 | | Contract clause gap analysis |
-| TPP-05 | Art. 30(2)(e), (3)(e) | | Audit rights; audit reports |
-| TPP-06 | Art. 29 | RTS on subcontracting | Concentration and sub-outsourcing assessment |
-| TPP-07 | Art. 28(8) | | Exit strategy; transition-test evidence |
-| TPP-08 | Art. 31 to 44 | | CTPP designation tracking |
-| TPP-09 | Art. 28(3) | ITS on register of information | Annual report to authority |
+| DORA pillar | Primary standards | Supporting standards |
+|---|---|---|
+| Pillar 0 Governance (Art. 5, 6) | COBIT; EBA ICT guidelines | NIST CSF (Identify); ISO/IEC 27001 leadership clauses |
+| Pillar 1 ICT risk management (Art. 5 to 16) | ISO/IEC 27001 and 27002; ISO/IEC 22301 | ISO/IEC 27005; 27031; 27017; 27018; NIST CSF |
+| Pillar 2 Incident management (Art. 17 to 23) | ISO/IEC 27035; EBA ICT guidelines | NIST CSF (Respond, Recover); GDPR |
+| Pillar 3 Resilience testing (Art. 24 to 27) | TIBER-EU; OWASP; PTES | MITRE ATT&CK; ISO/IEC 27001 |
+| Pillar 4 Third-party risk (Art. 28 to 44) | EBA outsourcing guidelines; ISO/IEC 27036 | ISO/IEC 27017 and 27018; SOC 2; ISAE 3402 |
+| Pillar 5 Information sharing (Art. 45) | Traffic Light Protocol; MITRE ATT&CK | GDPR; sector sharing community rules |
 
-## Pillar 5: Information and Intelligence Sharing
+### Control-family cross-reference
 
-| Control | DORA article(s) | Supplementing standards | Primary evidence |
-|---|---|---|---|
-| ISH-01 | Art. 45(1) | | Participation decision; risk assessment |
-| ISH-02 | Art. 45(1)(b) | | Membership of trusted community |
-| ISH-03 | Art. 45(2) | | Arrangement; DPO and legal review |
-| ISH-04 | Art. 45(3) | | Authority notifications |
-| ISH-05 | Art. 45(1)(a) | | Evidence of operational use |
+| Control family | Toolkit controls | Best-fit standards |
+|---|---|---|
+| Governance and oversight | GOV-01 to GOV-07 | COBIT; EBA ICT guidelines; ISO/IEC 27001 clauses 5 and 9 |
+| Asset and dependency management | RM-02 | ISO/IEC 27002; NIST CSF (Identify) |
+| Risk assessment | RM-03 | ISO/IEC 27005; NIST CSF |
+| Access control and authentication | RM-04 | ISO/IEC 27002; ISO/IEC 27017 |
+| Cryptography | RM-04 | ISO/IEC 27002 |
+| Change and patch management | RM-04 | ISO/IEC 27002 |
+| Logging and detection | RM-05 | ISO/IEC 27002; NIST CSF (Detect); MITRE ATT&CK |
+| Continuity and recovery | RM-06 | ISO/IEC 22301; ISO/IEC 27031 |
+| Backup and restore | RM-07 | ISO/IEC 27002; ISO/IEC 22301 |
+| Incident handling | INC-01 to INC-09 | ISO/IEC 27035; NIST CSF (Respond) |
+| Testing (baseline) | TST-01 to TST-05 | OWASP; PTES; ISO/IEC 27002 |
+| Testing (advanced) | TST-06 to TST-08 | TIBER-EU; MITRE ATT&CK |
+| Supplier management | TPP-01 to TPP-09 | EBA outsourcing guidelines; ISO/IEC 27036; SOC 2; ISAE 3402 |
+| Threat intelligence sharing | ISH-01 to ISH-05 | Traffic Light Protocol; MITRE ATT&CK |
 
-## How to use this for coverage assurance
+### How to use standards without doubling your work
 
-- Confirm every applicable DORA article maps to at least one control (completeness).
-- For each control, confirm the primary evidence exists and is current (operating effectiveness).
-- Where an article does not apply (for example, TLPT for an entity that is not named), write down the reason rather than leaving it blank.
+1. Start from what you already run. List your current certifications and frameworks.
+2. Map them to the pillars using the tables above. Mark the DORA controls they already cover.
+3. Find the gaps. These are usually the DORA-specific items no general standard covers: the register of information, incident reporting deadlines, exit testing, and TLPT.
+4. Reuse the evidence. An ISO/IEC 27001 audit report, a 22301 continuity test, or a provider SOC 2 report can all be DORA evidence when you link them to a control.
+5. Do not assume certification equals compliance. Always check the result against DORA and the current RTS and ITS.
