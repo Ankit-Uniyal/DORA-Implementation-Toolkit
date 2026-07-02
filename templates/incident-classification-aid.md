@@ -1,54 +1,52 @@
-# Template — Incident Classification Aid
+# Template: Incident Classification Aid
 
-Supports DORA Art. 18 and the RTS on classification. Use this aid to consistently assess whether an ICT-related incident is **major** (triggering mandatory reporting) and to classify significant cyber threats.
+Supports DORA Art. 18 and the RTS on classification. Use this aid to decide, in a consistent way, whether an ICT-related incident is major (which triggers mandatory reporting) and to help classify significant cyber threats.
 
-> **Materiality thresholds are defined in the RTS on classification.** The exact numeric thresholds (e.g. numbers/percentages of clients or transactions affected, downtime hours, economic-impact amounts) must be taken from the current official RTS. This aid provides the criteria structure and a worksheet; **populate the thresholds from the RTS in force** before operational use.
-
----
+Important: the exact thresholds are set in the RTS on classification. The numbers (for example, how many clients or transactions are affected, how many hours of downtime, or the money amounts) must be taken from the current official RTS. This aid gives you the structure and a worksheet. Fill in the thresholds from the RTS in force before you use it for real.
 
 ## 1. Classification criteria (Art. 18)
 
-Assess the incident against each criterion, then apply the RTS thresholds/logic to decide "major".
+Assess the incident against each criterion, then apply the RTS thresholds and logic to decide if it is major.
 
 | # | Criterion | What to measure | RTS threshold (fill in) | Value observed | Met? |
-|---|-----------|-----------------|-------------------------|----------------|------|
-| 1 | Clients / counterparts / transactions affected | Number and/or relevance | _[from RTS]_ | | |
-| 2 | Reputational impact | Media coverage, complaints, regulatory attention | _[from RTS]_ | | |
-| 3 | Duration & service downtime | Elapsed time of disruption | _[from RTS]_ | | |
-| 4 | Geographical spread | Areas/Member States affected | _[from RTS]_ | | |
-| 5 | Data losses | Impact on availability, authenticity, integrity, confidentiality | _[from RTS]_ | | |
-| 6 | Criticality of services affected | Critical/important functions impacted | _[from RTS]_ | | |
-| 7 | Economic impact | Direct + indirect costs, absolute & relative | _[from RTS]_ | | |
+|---|---|---|---|---|---|
+| 1 | Clients, counterparts, transactions affected | Number and importance | [from RTS] | | |
+| 2 | Reputational impact | Media, complaints, regulator attention | [from RTS] | | |
+| 3 | Duration and downtime | How long the disruption lasts | [from RTS] | | |
+| 4 | Geographical spread | Areas or Member States affected | [from RTS] | | |
+| 5 | Data losses | Impact on availability, authenticity, integrity, confidentiality | [from RTS] | | |
+| 6 | Criticality of services affected | Critical or important functions hit | [from RTS] | | |
+| 7 | Economic impact | Direct and indirect costs, absolute and relative | [from RTS] | | |
 
-**Determination:** _[Major / Not major]_ — record the reasoning and which criteria/thresholds were decisive.
+Determination: [Major / Not major]. Record the reasoning and which criteria and thresholds were the deciding ones.
 
 ## 2. Decision workflow
 
-1. Log the incident and capture the seven criteria inputs as early data allows.
-2. Apply the RTS logic (primary/secondary criteria and thresholds) to decide "major".
-3. If **major**, trigger the [reporting runbook](../docs/implementation/02-incident-management-and-reporting.md): initial, intermediate, final reports.
-4. Re-evaluate classification as new information emerges (an incident can escalate to major).
-5. If a **significant cyber threat** (not an incident), assess criticality of services at risk, number of affected parties, and geographical spread for voluntary notification.
+- Log the incident and capture the seven criteria inputs as soon as the data allows.
+- Apply the RTS logic (which criteria and thresholds count) to decide if it is major.
+- If it is major, start the reporting runbook: initial, intermediate, and final reports.
+- Re-check the classification as new facts come in. An incident can become major later.
+- If this is a significant cyber threat and not an incident, assess how critical the services at risk are, how many parties are affected, and how wide the spread is, then decide on voluntary notification.
 
 ## 3. Incident record fields
 
 | Field | Value |
-|-------|-------|
+|---|---|
 | Incident ID | |
-| Detected (date/time) | |
+| Detected (date and time) | |
 | Description | |
-| Affected functions/assets | |
+| Affected functions or assets | |
 | Classification decision | Major / Not major |
-| Decision maker / time | |
-| Initial report due / sent | |
+| Decision maker and time | |
+| Initial report due and sent | |
 | Intermediate report(s) | |
-| Final report due / sent | |
+| Final report due and sent | |
 | Root cause | |
 | Clients notified? | Yes / No / N/A |
-| Lessons learned ref | |
+| Lessons-learned reference | |
 
 ## 4. Reminders
 
-- Classification is **dynamic** — re-check as impact becomes clearer.
-- The initial-notification clock is tight; pre-assign ownership and escalation.
-- Keep the evidence trail (timeline, inputs, decision rationale) for audit and the final report.
+- Classification can change. Re-check it as the impact becomes clearer.
+- The initial-notification clock is tight. Pre-assign ownership and escalation.
+- Keep the evidence trail (timeline, inputs, decision reasoning) for audit and for the final report.
