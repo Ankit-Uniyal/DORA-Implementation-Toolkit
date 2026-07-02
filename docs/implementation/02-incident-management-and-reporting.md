@@ -1,92 +1,114 @@
-# Pillar 2 — ICT-Related Incident Management, Classification & Reporting
+# Pillar 2 - ICT Incident Management, Classification and Reporting
 
-**DORA articles:** Art. 17 (incident management process), Art. 18 (classification of incidents and cyber threats), Art. 19 (reporting of major ICT-related incidents and voluntary notification of significant cyber threats), Art. 20 (harmonised reporting content and templates), Art. 21 (centralisation / single EU Hub — feasibility), Art. 22 (supervisory feedback), Art. 23 (operational or security payment-related incidents). Supplemented by the RTS/ITS on classification and on reporting content, templates and timelines.
+**DORA articles:** Art. 17 to 23. Supplemented by the RTS on classification and the ITS on reporting content, templates and timelines.
+
+**Read first:** [Glossary](../glossary.md). **Use with:** [Incident classification aid](../../templates/incident-classification-aid.md).
 
 ---
 
-## 1. Purpose
+## 1. What this pillar is really about
 
-DORA requires a consistent, documented process to detect, manage, log and report ICT-related incidents, plus a harmonised approach to classifying their severity and reporting **major** incidents to the competent authority within strict deadlines.
+Things will go wrong. DORA does not punish you for having incidents. It expects you to handle them well and, when they are serious, to tell your regulator quickly and honestly. The two hard parts are: deciding when an incident is "major" (classification), and reporting it inside tight deadlines. Both need to be worked out in advance, because in a real crisis you will not have time to figure them out from scratch.
 
-## 2. Incident management process (Art. 17)
+The plain flow is: detect, log, classify, contain, recover, report, review.
 
-Establish and implement an ICT-related incident management process to detect, manage and notify incidents. Requirements include:
-- Procedures to identify, track, log, categorise and classify incidents by priority, severity and criticality of affected services.
-- Assigned roles and responsibilities for different incident types and scenarios.
-- Plans for communication to staff, external stakeholders, media, and (where relevant) clients, and for internal escalation including complaints.
-- Ensuring at least major incidents are reported to relevant senior management, with impact, response and additional controls to be established.
-- Response procedures to mitigate impacts and ensure services become operational and secure.
+## 2. The incident process (Art. 17)
 
-## 3. Classification (Art. 18)
+You need one documented process to find, manage, and notify incidents. It must set roles, define severity levels, define escalation, and make sure serious incidents reach senior management.
 
-Classify incidents and determine their impact using criteria set out in DORA and detailed in the RTS. The primary classification criteria include:
-- Number and/or relevance of **clients, financial counterparts and transactions** affected.
-- **Reputational impact**.
-- **Duration** of the incident, including service downtime.
-- **Geographical spread** (areas affected, especially cross-border).
-- **Data losses** — impact on availability, authenticity, integrity or confidentiality of data.
-- **Criticality of services affected**, including the entity's critical/important functions.
-- **Economic impact** in absolute and relative terms.
+**What good looks like:** a single runbook that anyone on call can follow at 3am. It names who classifies, who decides, who reports, and who talks to clients. It has clear severity levels and a clock that starts the moment an incident is called "major".
 
-An incident is classified as **major** when it meets the materiality thresholds defined in the RTS across these criteria. **Significant cyber threats** are classified using criticality of services at risk, number of affected parties, and geographical spread.
+**What weak looks like:** an incident process that lives in someone's head, with no agreed way to decide severity and no pre-assigned reporting owner.
 
-## 4. Reporting of major incidents (Art. 19)
+## 3. Classification: is it "major"? (Art. 18)
 
-Report major ICT-related incidents to the relevant competent authority. Reporting is staged:
-- **Initial notification** — submitted within the early deadline after classification as major.
-- **Intermediate report** — when the status of the original incident has changed significantly or handling has changed based on new information, and thereafter on updates.
-- **Final report** — when the root-cause analysis is complete (regardless of whether mitigation measures are implemented) and actual impact figures are available.
+This is the decision that triggers mandatory reporting. DORA gives you seven things to look at. The exact thresholds live in the RTS and you must fill them in from the current official text.
 
-> **Deadlines are defined in the ITS on reporting.** Exact hour-based timelines for initial, intermediate and final reports must be confirmed against the current official ITS text before relying on them operationally. Build your runbook around the confirmed timelines.
+The seven criteria:
 
-Entities **may**, on a voluntary basis, notify **significant cyber threats** to the competent authority when they deem the threat relevant to the financial system, service users or clients. Where an incident affects clients, the entity must inform them without undue delay and communicate protective measures.
+1. **Clients, counterparts and transactions affected:** how many, and how important.
+2. **Reputational impact:** media, complaints, regulator attention.
+3. **Duration and downtime:** how long the disruption lasts.
+4. **Geographical spread:** how many areas or countries are hit.
+5. **Data losses:** harm to the availability, authenticity, integrity, or confidentiality of data.
+6. **Criticality of services affected:** whether critical or important functions are hit.
+7. **Economic impact:** direct and indirect costs.
 
-## 5. Harmonised content & templates (Art. 20)
+An incident is "major" when it crosses the thresholds set in the RTS across these criteria. Use the [classification aid](../../templates/incident-classification-aid.md) so the decision is consistent every time.
 
-The ESAs develop standard forms, templates and procedures for reporting. Align your reporting fields to the ITS template so submissions are complete and machine-consumable.
+> **Important warning about how to think about this.** Reporting a major incident on time is a hard legal duty, not a "nice to have". If you miss the deadline, you have breached DORA, even if everything else was handled well. Treat the reporting clock as the single most time-critical thing in this whole pillar.
 
-## 6. Payment-related operational/security incidents (Art. 23)
+## 4. Reporting a major incident (Art. 19 and 20)
 
-The incident-management and reporting requirements also apply to **operational or security payment-related incidents** and to major ones concerning credit institutions, payment institutions, account information service providers and e-money institutions.
+Reporting happens in three stages:
+
+1. **Initial notification:** a first alert soon after you classify the incident as major.
+2. **Intermediate report:** an update when the situation changes in a meaningful way, and on further updates.
+3. **Final report:** once you know the root cause and the actual impact.
+
+> **The exact deadlines are set in the ITS.** They are measured in hours from set trigger points. You must take the current numbers from the official ITS and build your runbook around them. Do not guess. Confirm, then hard-code the deadlines into your process and your on-call rota.
+
+You use standard forms and templates from the ITS. Line up your reporting fields to those forms so nothing is missing when the clock is running.
+
+If clients are affected, tell them without undue delay and tell them what to do to protect themselves.
+
+## 5. Voluntary threat notification (Art. 19)
+
+You can, if you choose, tell your regulator about a significant cyber threat, even before it causes an incident. This is optional. Decide in advance who assesses threats and who makes that call.
+
+## 6. Payment incidents (Art. 23)
+
+The same rules also cover operational or security incidents linked to payments, for banks, payment firms, account information service providers, and e-money firms. Do not let payment incidents fall through a separate crack.
 
 ## 7. Control objectives
 
 | ID | Control objective |
 |----|-------------------|
-| INC-01 | A documented incident management process defines detection, logging, categorisation, escalation and closure. |
-| INC-02 | Incident classification applies the DORA/RTS criteria and thresholds consistently. |
-| INC-03 | Roles, responsibilities and an on-call/escalation matrix are defined and tested. |
-| INC-04 | Major incidents are reported to the competent authority within the mandated initial/intermediate/final deadlines. |
-| INC-05 | Reporting content aligns to the ITS templates and is complete and accurate. |
-| INC-06 | Clients are informed without undue delay where they are affected, with protective guidance. |
+| INC-01 | A documented process covers detection, logging, categorising, escalation and closure. |
+| INC-02 | Classification applies the DORA and RTS criteria and thresholds consistently. |
+| INC-03 | Roles and an escalation and on-call matrix are defined and tested. |
+| INC-04 | Major incidents are reported inside the initial, intermediate and final deadlines. |
+| INC-05 | Report content matches the ITS templates and is complete and accurate. |
+| INC-06 | Affected clients are told without undue delay, with protective advice. |
 | INC-07 | Significant cyber threats are assessed for voluntary notification. |
-| INC-08 | Post-incident root-cause analysis feeds lessons learned and framework updates. |
-| INC-09 | Payment-related operational/security incidents are captured under the same regime where applicable. |
+| INC-08 | Root-cause analysis feeds lessons learned and framework updates. |
+| INC-09 | Payment-related incidents are captured under the same regime where relevant. |
 
-## 8. Implementation steps
+## 8. How to implement, in order
 
-1. Document the process end to end (detect, triage, classify, contain, eradicate, recover, report, review) with a RACI.
-2. Codify classification as a decision aid encoding the RTS criteria and thresholds (see the incident classification template).
-3. Build the regulatory reporting runbook with the confirmed initial/intermediate/final deadlines and the ITS template fields.
-4. Set up tooling and logging to capture incident timeline, evidence and classification inputs.
-5. Define client and stakeholder communications templates and approval paths.
-6. Establish threat-notification triage to decide on voluntary cyber-threat notification.
-7. Run exercises (tabletop and technical) to validate detection, escalation and reporting within deadlines.
-8. Integrate lessons learned into the ICT risk framework and controls.
+1. **Weeks 1 to 3:** Write the incident process end to end, with a RACI and severity levels.
+2. **Weeks 2 to 5:** Build the classification aid with the RTS criteria and thresholds filled in.
+3. **Weeks 3 to 6:** Build the reporting runbook with the confirmed ITS deadlines and template fields. Pre-assign the reporting owner and backups.
+4. **Weeks 4 to 8:** Set up logging and tooling so you can capture the incident timeline and evidence automatically.
+5. **Weeks 5 to 9:** Write client and stakeholder communication templates with pre-agreed approvers.
+6. **Weeks 8 to 12:** Run a tabletop exercise of a major incident, timed against the real deadlines. Fix whatever slows you down.
+7. **Ongoing:** Post-incident reviews, and feed lessons back into controls.
 
-## 9. Evidence to retain
+## 9. Sample artifact: incident timeline (worked example)
 
-- Incident management policy/procedure and RACI.
-- Classification decision aid and worked examples.
-- Incident register with timelines, classifications and evidence.
-- Copies of initial/intermediate/final regulatory submissions and acknowledgements.
-- Client notification records where applicable.
-- Post-incident review reports.
-- Exercise reports demonstrating deadline adherence.
+| Time | Event | Action | Owner |
+|------|-------|--------|-------|
+| 09:12 | Monitoring alerts on failed logins spike | Triage opened | SOC analyst |
+| 09:40 | Confirmed unauthorised access to a client system | Severity raised, incident manager paged | Incident manager |
+| 10:15 | Classification aid run: crosses "major" threshold | Reporting clock started | Incident manager |
+| 10:55 | Initial notification submitted to regulator | Filed and acknowledged | Reporting owner |
+| Day 2 | Situation update | Intermediate report submitted | Reporting owner |
+| Day 9 | Root cause confirmed, impact quantified | Final report submitted | Reporting owner |
 
-## 10. Common pitfalls
+Times are examples. The point is that the classification decision and the reporting clock are explicit and owned.
 
-- No pre-agreed classification thresholds, leading to inconsistent or late "major" determinations.
-- Reporting runbook that cannot meet the initial-notification deadline due to unclear ownership or slow internal escalation.
-- Incomplete incident logging, so the final report lacks accurate impact figures and root cause.
-- Forgetting that payment-related security incidents fall within scope.
+## 10. Evidence to keep
+
+Incident process and RACI, the classification aid with worked examples, an incident register with full timelines, copies of initial, intermediate and final reports plus regulator acknowledgements, client notices, post-incident reviews, and exercise reports that prove you can hit the deadlines.
+
+## 11. Common mistakes
+
+- No agreed thresholds, so "major" is decided late or inconsistently.
+- A reporting runbook that cannot meet the first deadline because ownership or escalation is slow.
+- Poor logging, so the final report lacks accurate impact and root cause.
+- Forgetting that payment security incidents are in scope.
+
+## 12. Quick self-check
+
+- If a major incident happened right now, do you know exactly who classifies it, who reports it, and by when? If any answer is "not sure", fix that before anything else.
+- Have you ever run a timed exercise against the real reporting deadline? If not, do one soon. It is the fastest way to find the weak link.
