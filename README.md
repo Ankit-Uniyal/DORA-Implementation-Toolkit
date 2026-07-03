@@ -46,7 +46,7 @@ use a lighter "simplified framework". See the
 | # | Pillar | DORA articles | Guide |
 |---|---|---|---|
 | 0 | Governance and proportionality | Art. 5 to 6 | [governance](docs/2-implementation/00-governance-and-proportionality.md) |
-| 1 | ICT risk management | Art. 5 to 16 | [ict-risk-management](docs/2-implementation/01-ict-risk-management.md) |
+| 1 | ICT risk management | Art. 6 to 16 | [ict-risk-management](docs/2-implementation/01-ict-risk-management.md) |
 | 2 | Incident management, classification and reporting | Art. 17 to 23 | [incident-management](docs/2-implementation/02-incident-management-and-reporting.md) |
 | 3 | Resilience testing (including TLPT) | Art. 24 to 27 | [resilience-testing](docs/2-implementation/03-resilience-testing.md) |
 | 4 | ICT third-party risk management | Art. 28 to 44 | [third-party-risk](docs/2-implementation/04-third-party-risk-management.md) |
