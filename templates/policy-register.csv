@@ -1,0 +1,10 @@
+policy_id,policy_name,dora_pillar,dora_articles,owner,approver,approved_date,last_review,next_review,status,linked_controls,evidence_location
+POL-01,ICT Risk Management Framework,1,Art. 6,CISO,Board,2025-01-15,2025-01-15,2026-01-15,Approved,RM-01;RM-04,/governance/framework
+POL-02,Information Security Policy,1,Art. 9,CISO,ExCo,2025-02-01,2025-02-01,2026-02-01,Approved,RM-04,/security/infosec-policy
+POL-03,Business Continuity and DR Policy,1,Art. 11-12,Head of Infrastructure,ExCo,2025-02-10,2025-02-10,2026-02-10,Approved,RM-06;RM-07,/continuity
+POL-04,Backup Policy,1,Art. 12,Head of Infrastructure,CISO,2025-02-10,2025-02-10,2026-02-10,Approved,RM-07,/continuity/backup
+POL-05,ICT Incident Management and Reporting Policy,2,Art. 17-23,Incident Manager,ExCo,2025-03-01,2025-03-01,2026-03-01,Approved,INC-01;INC-04,/incident
+POL-06,Resilience Testing Policy,3,Art. 24-27,CISO,ExCo,2025-03-15,2025-03-15,2026-03-15,Approved,TST-01;TST-05,/testing
+POL-07,ICT Third-Party Risk Policy,4,Art. 28-30,Head of Third-Party Risk,Board,2025-04-01,2025-04-01,2026-04-01,Approved,TPP-01;TPP-04,/third-party
+POL-08,Information Sharing Policy,5,Art. 45,CISO,ExCo,,,, Draft,ISH-01;ISH-03,/info-sharing
+POL-09,Proportionality Assessment,0,Art. 4;16,Head of Compliance,Board,2025-01-10,2025-01-10,2026-01-10,Approved,GOV-06,/governance/proportionality
