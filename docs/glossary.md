@@ -16,7 +16,7 @@ Plain-English meanings of the terms used across this toolkit. If you are new to 
 
 **RTS (Regulatory Technical Standards).** Detailed rules written by the ESAs that fill in the specifics of DORA. They are legally binding. Example: the RTS that sets the exact thresholds for when an incident counts as "major".
 
-**ITS (Implementing Technical Standards).** Rules from the ESAs that set out standard forms, templates, and formats. Example: the ITS that gives the template for reporting an incident.
+**ITS (Implementing Technical Standards).** Rules from the ESAs that set out standard forms, templates, and formats. Example: the ITS that gives the template for the register of information.
 
 > Simple way to remember it: DORA says "you must report major incidents". The RTS says "here is exactly what "major" means". The ITS says "here is the exact form to use".
 
