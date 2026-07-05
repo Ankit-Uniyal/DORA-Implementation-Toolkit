@@ -12,6 +12,7 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 ## [2026-07-05]
 
 ### Added
+- "templates/dora-workbook.html" — single-file, offline-capable combined workbook: linked tabs for the asset, third-party and policy registers plus maturity scoring, an auto-calculating maturity heat map and overall-readiness gauge, and per-tab CSV export. Loads the source CSVs from main on open.
 - "docs/luxembourg-cssf-overlay.md" — Luxembourg overlay covering CSSF/CAA competent-authority split, the binding CSSF circulars (25/893, 25/892, 25/882, 25/880, 23/834, 21/769), incident reporting to the CSSF, the ICT third-party notification routes (IMAS vs CSSF form; 3-month / 1-month lead times), register-of-information submission via the CSSF eDesk portal, and TLPT under TIBER-LU.
 - "templates/master-traceability-matrix.csv" — audit-navigable matrix linking each of the 48 controls to its DORA article, supplementing RTS/ITS, questionnaire item, audit test (A-*), primary evidence, and an evidence-location/status column to fill in.
 - "docs/regulatory-references.md" — added the Reporting ITS (EU) 2025/302 (forms, templates, procedures) as a distinct row alongside the Reporting RTS 2025/301.
