@@ -12,6 +12,7 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 ## [2026-07-05]
 
 ### Added
+- "templates/dora-workbook.xlsx" — native Excel version of the combined workbook with live formulas: auto-scoring, per-pillar averages, and RAG status; a 0-5 score data-validation dropdown; and conditional formatting on scores and RAG cells. Mirrors the HTML workbook's structure and logic so the two stay consistent. README updated with a download link.
 - GitHub Pages enabled (deploy from main) so the combined workbook has a live, clickable URL: https://ankit-uniyal.github.io/DORA-Implementation-Toolkit/templates/dora-workbook.html — it runs in the browser with no download. README updated with this link.
 - "templates/dora-workbook.html" — single-file, offline-capable combined workbook: linked tabs for the asset, third-party and policy registers plus maturity scoring, an auto-calculating maturity heat map and overall-readiness gauge, and per-tab CSV export. Loads the source CSVs from main on open.
 - "docs/luxembourg-cssf-overlay.md" — Luxembourg overlay covering CSSF/CAA competent-authority split, the binding CSSF circulars (25/893, 25/892, 25/882, 25/880, 23/834, 21/769), incident reporting to the CSSF, the ICT third-party notification routes (IMAS vs CSSF form; 3-month / 1-month lead times), register-of-information submission via the CSSF eDesk portal, and TLPT under TIBER-LU.
