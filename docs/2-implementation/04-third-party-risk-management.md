@@ -135,12 +135,7 @@ The approved strategy and policy, the register (current and the versions sent to
 - Exit plans that were written but never tested, so they fail when needed.
 - Ignoring concentration when many critical functions sit with one provider you cannot easily replace.
 
-## 14. Quick self-check
-- Does your register match your actual technology spend, including cloud and SaaS? If not, completeness is your first job.
-- For your most important provider, do you have real audit rights and a tested exit plan? If either is missing, that is a priority gap.
-- Do you know which of your providers are CTPPs? If not, start tracking it.
-
-## 15. When you have no negotiating leverage (startups vs hyperscalers)
+## 14. When you have no negotiating leverage (startups vs hyperscalers)
 
 This is the part small firms find hardest and it is missing from most guidance.
 DORA requires certain contract terms (audit rights, exit, regulator cooperation)
@@ -193,7 +188,7 @@ Pass line for a small firm: for every critical-function provider you either hold
 the DORA-required terms, or you hold a documented, proportionate substitute plus a
 board-approved residual-risk decision, plus a technical mitigation for lock-in.
 
-## 16. Quick self-check
+## 15. Quick self-check
 - Does your register match your actual technology spend, including cloud and SaaS? If not, completeness is your first job.
 - For your most important provider, do you have real audit rights (or a documented substitute) and a tested exit plan? If either is missing, that is a priority gap.
 - Do you know which of your providers are CTPPs? If not, start tracking it.
