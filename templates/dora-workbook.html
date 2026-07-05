@@ -124,29 +124,3 @@ boot();
 </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DORA Combined Workbook (auto-calculating)</title>
-<style>
-:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9198a1;--line:#30363d;--accent:#2f81f7;--red:#f85149;--amber:#d29922;--green:#3fb950;--head:#1f2630;}
-*{box-sizing:border-box}
-body{margin:0;font:14px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-header{padding:16px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
-h1{font-size:18px;margin:0 0 4px} .sub{color:var(--mut);font-size:12px;max-width:1000px}
-nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-nav button{background:transparent;color:var(--mut);border:1px solid transparent;border-radius:6px;padding:7px 12px;cursor:pointer;font-size:13px}
-nav button:hover{color:var(--ink);background:#21262d}
-nav button.active{color:var(--ink);background:#21262d;border-color:var(--line)}
-main{padding:18px 16px;max-width:1400px;margin:0 auto}
-.tab{display:none} .tab.active{display:block}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
-.row{display:flex;flex-wrap:wrap;gap:12px}
-.kpi{flex:1;min-width:150px;background:var(--head);border:1px solid var(--line);border-radius:10px;padding:14px}
-.kpi .n{font-size:26px;font-weight:700} .kpi .l{color:var(--mut);font-size:12px;margin-top:2px}
-table{border-collapse:collapse;width:100%;font-size:12.5px}
-th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
-th{background:var(--head);position:sticky;top:52px;z-index:2}
-td[contenteditable="true"]{background:#0f1620;cursor:text}
