@@ -1,6 +1,6 @@
 # Regulatory References: Real Figures Behind the Placeholders
 
-**Last verified against official sources (EUR-Lex): 3 July 2026.** Always re-check
+**Last verified against the authentic Official Journal text on EUR-Lex: all instrument numbers, OJ citations, in-force status, classification thresholds, and reporting deadlines confirmed on 5 July 2026.** Always re-check
 the live text on EUR-Lex before relying on any figure for a real compliance or
 audit job. Regulatory technical standards (RTS) and implementing technical
 standards (ITS) are amended over time; this file records the version the toolkit
@@ -26,6 +26,7 @@ the instrument; open it and you land on the authentic text.
 | Classification RTS | Commission Delegated Regulation (EU) 2024/1772 (13 Mar 2024) | OJ L, 2024/1772, 25.6.2024 | Incident classification criteria and materiality thresholds | http://data.europa.eu/eli/reg_del/2024/1772/oj |
 | Register ITS | Commission Implementing Regulation (EU) 2024/2956 (29 Nov 2024) | OJ L, 2024/2956, 2.12.2024 | Pillar 4: standard templates for the register of information | http://data.europa.eu/eli/reg_impl/2024/2956/oj |
 | Reporting RTS | Commission Delegated Regulation (EU) 2025/301 (23 Oct 2024) | OJ L, 2025/301, 20.2.2025 | Content and time limits for initial / intermediate / final reports and voluntary threat notifications | http://data.europa.eu/eli/reg_del/2025/301/oj |
+| Reporting ITS | Commission Implementing Regulation (EU) 2025/302 (23 Oct 2024) | OJ L, 2025/302, 20.2.2025 | Standard forms, templates, and procedures for reporting major incidents and voluntary threat notifications | http://data.europa.eu/eli/reg_impl/2025/302/oj |
 | Subcontracting RTS | Commission Delegated Regulation (EU) 2025/532 (24 Mar 2025) | OJ L, 2025/532, 2.7.2025 | Pillar 4: elements to assess when subcontracting ICT services supporting critical or important functions | http://data.europa.eu/eli/reg_del/2025/532/oj |
 | TLPT RTS | Commission Delegated Regulation (EU) 2025/1190 (13 Feb 2025) | OJ L, 2025/1190, 18.6.2025 | Pillar 3: criteria for entities required to perform threat-led penetration testing, plus TLPT requirements and standards | http://data.europa.eu/eli/reg_del/2025/1190/oj |
 
