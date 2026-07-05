@@ -61,8 +61,8 @@ Where a control is not applicable (for example TLPT for a firm not named), write
 | A-INC-01 | Inspect the incident process end to end. | Process doc | Covers detection, logging, severity, escalation, closure. |
 | A-INC-02 | Re-perform classification on a sample of incidents using the RTS criteria. | Classification aid, incident records | Classifications consistent and correct against the RTS. |
 | A-INC-03 | Inspect the on-call and escalation matrix and any exercise. | Matrix, exercise report | Defined and tested. |
-| A-INC-04 | For every major incident in the period, trace initial, intermediate, and final reports to the deadlines. | Reports, timestamps | All reports made inside the ITS deadlines. Test the whole population, not a sample. |
-| A-INC-05 | Compare submitted reports to the ITS template fields. | Submitted forms | Complete and accurate. |
+| A-INC-04 | For every major incident in the period, trace initial, intermediate, and final reports to the deadlines. | Reports, timestamps | All reports made inside the Reporting RTS deadlines. Test the whole population, not a sample. |
+| A-INC-05 | Compare submitted reports to the Reporting RTS template fields. | Submitted forms | Complete and accurate. |
 | A-INC-06 | Inspect client notices where clients were affected. | Client notices | Sent without undue delay, with protective advice. |
 | A-INC-07 | Inspect the process for assessing cyber threats for voluntary notification. | Triage records | A working process exists. |
 | A-INC-08 | Sample post-incident reviews; trace to closure. | Reviews | RCA done and actions closed. |
