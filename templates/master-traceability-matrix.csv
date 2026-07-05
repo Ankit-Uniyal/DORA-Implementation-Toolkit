@@ -1,0 +1,49 @@
+control_id,pillar,dora_article,supplementing_standard,questionnaire_item,audit_test,primary_evidence,evidence_location,status_not_started_in_progress_done
+GOV-01,0: Governance & Proportionality,"Art. 5, 6(1) to (3)",ICT risk RTS (EU) 2024/1774,GOV-01,A-GOV-01,Board minutes; approved framework,,Not started
+GOV-02,0: Governance & Proportionality,Art. 5(2),,GOV-02,A-GOV-02,RACI; org chart,,Not started
+GOV-03,0: Governance & Proportionality,"Art. 5(2)(f), 6(5)",,GOV-03,A-GOV-03,Board reporting pack,,Not started
+GOV-04,0: Governance & Proportionality,Art. 5(4),,GOV-04,A-GOV-04,Training records,,Not started
+GOV-05,0: Governance & Proportionality,Art. 5(3),,GOV-05,A-GOV-05,Budget approvals,,Not started
+GOV-06,0: Governance & Proportionality,"Art. 4, 16",ICT risk RTS (EU) 2024/1774 (simplified framework),GOV-06,A-GOV-06,Proportionality assessment,,Not started
+GOV-07,0: Governance & Proportionality,"Art. 6(4), 5(2)",,GOV-07,A-GOV-07,Audit plan; terms of reference,,Not started
+RM-01,1: ICT Risk Management,Art. 6(8),ICT risk RTS (EU) 2024/1774,RM-01,A-RM-01,Resilience strategy,,Not started
+RM-02,1: ICT Risk Management,Art. 8,ICT risk RTS (EU) 2024/1774,RM-02,A-RM-02,Asset and dependency inventory,,Not started
+RM-03,1: ICT Risk Management,Art. 8(2) to (7),,RM-03,A-RM-03,Risk assessment; register,,Not started
+RM-04,1: ICT Risk Management,Art. 9,ICT risk RTS (EU) 2024/1774,RM-04,A-RM-04,InfoSec policy; control standards,,Not started
+RM-05,1: ICT Risk Management,Art. 10,,RM-05,A-RM-05,Monitoring and alert config,,Not started
+RM-06,1: ICT Risk Management,Art. 11,,RM-06,A-RM-06,BC and DR plans; RTO and RPO; test reports,,Not started
+RM-07,1: ICT Risk Management,Art. 12,,RM-07,A-RM-07,Backup policy; restore-test evidence,,Not started
+RM-08,1: ICT Risk Management,Art. 13,,RM-08,A-RM-08,Post-incident reviews; lessons log,,Not started
+RM-09,1: ICT Risk Management,Art. 13(6),,RM-09,A-RM-09,Training completion records,,Not started
+RM-10,1: ICT Risk Management,Art. 6(5),,RM-10,A-RM-10,Annual review minutes,,Not started
+INC-01,2: Incident Mgmt & Reporting,Art. 17,,INC-01,A-INC-01,Incident process; RACI,,Not started
+INC-02,2: Incident Mgmt & Reporting,Art. 18,Classification RTS (EU) 2024/1772,INC-02,A-INC-02,Classification decision aid,,Not started
+INC-03,2: Incident Mgmt & Reporting,Art. 17(3),,INC-03,A-INC-03,Escalation matrix; exercise reports,,Not started
+INC-04,2: Incident Mgmt & Reporting,Art. 19(1) to (4),Reporting RTS (EU) 2025/301 (time limits),INC-04,A-INC-04,Regulatory submissions; timestamps,,Not started
+INC-05,2: Incident Mgmt & Reporting,Art. 20,Reporting RTS (EU) 2025/301 (content and templates),INC-05,A-INC-05,Submitted report forms,,Not started
+INC-06,2: Incident Mgmt & Reporting,Art. 19(3),,INC-06,A-INC-06,Client notification records,,Not started
+INC-07,2: Incident Mgmt & Reporting,Art. 19(2),,INC-07,A-INC-07,Threat-notification triage records,,Not started
+INC-08,2: Incident Mgmt & Reporting,"Art. 13, 17",,INC-08,A-INC-08,Post-incident reviews; lessons-learned log,,Not started
+INC-09,2: Incident Mgmt & Reporting,Art. 23,,INC-09,A-INC-09,Incident register (payment-related incidents captured),,Not started
+TST-01,3: Resilience Testing,Art. 24,,TST-01,A-TST-01,Testing programme; review record,,Not started
+TST-02,3: Resilience Testing,"Art. 24(6), 25",,TST-02,A-TST-02,Test calendar; dated test reports,,Not started
+TST-03,3: Resilience Testing,Art. 25(1),,TST-03,A-TST-03,Method catalogue mapped to system risk,,Not started
+TST-04,3: Resilience Testing,"Art. 24(5), 27",TLPT RTS (EU) 2025/1190,TST-04,A-TST-04,"Tester qualification, independence, insurance records",,Not started
+TST-05,3: Resilience Testing,Art. 24(5),,TST-05,A-TST-05,Findings tracker with fixes and re-tests,,Not started
+TST-06,3: Resilience Testing,Art. 26,TLPT RTS (EU) 2025/1190; TIBER-EU,TST-06,A-TST-06,"TLPT scope, reports, attestation",,Not started
+TST-07,3: Resilience Testing,Art. 26(3),TLPT RTS (EU) 2025/1190,TST-07,A-TST-07,TLPT scope covering in-scope third parties / pooled tests,,Not started
+TST-08,3: Resilience Testing,"Art. 26(6) to (11), 27",TLPT RTS (EU) 2025/1190; TIBER-EU,TST-08,A-TST-08,"TLPT method, regulator validation, attestation",,Not started
+TPP-01,4: ICT Third-Party Risk,Art. 28(2),Policy RTS (EU) 2024/1773,TPP-01,A-TPP-01,Third-party strategy; critical-function policy,,Not started
+TPP-02,4: ICT Third-Party Risk,Art. 28(3),Register ITS (EU) 2024/2956,TPP-02,A-TPP-02,Register of information,,Not started
+TPP-03,4: ICT Third-Party Risk,"Art. 28(4), 29",,TPP-03,A-TPP-03,Due-diligence records,,Not started
+TPP-04,4: ICT Third-Party Risk,Art. 30,,TPP-04,A-TPP-04,Contracts with required and enhanced terms,,Not started
+TPP-05,4: ICT Third-Party Risk,"Art. 30(2)(e), 30(3)(e)",,TPP-05,A-TPP-05,Contracts; audit and access reports,,Not started
+TPP-06,4: ICT Third-Party Risk,Art. 29,Subcontracting RTS (EU) 2025/532,TPP-06,A-TPP-06,Concentration and sub-outsourcing assessments,,Not started
+TPP-07,4: ICT Third-Party Risk,Art. 28(8),,TPP-07,A-TPP-07,Exit strategies and their test results,,Not started
+TPP-08,4: ICT Third-Party Risk,Art. 31 to 44,,TPP-08,A-TPP-08,Register and risk notes tracking CTPP status,,Not started
+TPP-09,4: ICT Third-Party Risk,Art. 28(3),Register ITS (EU) 2024/2956,TPP-09,A-TPP-09,Yearly register submission record,,Not started
+ISH-01,5: Information Sharing,Art. 45,,ISH-01,A-ISH-01,"Written, risk-based participation decision",,Not started
+ISH-02,5: Information Sharing,Art. 45(1),,ISH-02,A-ISH-02,Membership of a trusted community; arrangement,,Not started
+ISH-03,5: Information Sharing,Art. 45(2),,ISH-03,A-ISH-03,"Arrangement with confidentiality, GDPR, competition safeguards; legal/DPO review",,Not started
+ISH-04,5: Information Sharing,Art. 45(3),,ISH-04,A-ISH-04,Notifications to the regulator on joining or leaving,,Not started
+ISH-05,5: Information Sharing,Art. 45(1),,ISH-05,A-ISH-05,Records showing intelligence used in detection,,Not started
