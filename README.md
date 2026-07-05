@@ -27,6 +27,7 @@ compliance or audit job. **This is guidance, not legal advice.**
 | Know how much applies to you | [Proportionality guide](docs/proportionality-guide.md) |
 | See the real thresholds and deadlines | [Regulatory references](docs/regulatory-references.md) |
 | Find your supervisor and reporting channel | [Competent authorities](docs/competent-authorities.md) |
+| Implement in Luxembourg (CSSF) | [Luxembourg overlay](docs/luxembourg-cssf-overlay.md) |
 | Plan the build | [Implementation roadmap](docs/implementation-roadmap.md) |
 | See a fully worked example | [Model startup: NovaPay](examples/model-startup-novapay.md) |
 
@@ -62,6 +63,7 @@ self-check.
 - **[FAQ](docs/faq.md)** — what compliance means, who supervises you, and why there is no "DORA certificate".
 - **[Regulatory references](docs/regulatory-references.md)** — the real RTS/ITS thresholds and reporting deadlines, with EUR-Lex links and a "last verified" date. Single source of truth for every number.
 - **[Competent authorities](docs/competent-authorities.md)** — per-Member-State supervisor directory and how to set up your incident-reporting channel.
+- **[Luxembourg overlay](docs/luxembourg-cssf-overlay.md)** — CSSF-specific view: competent authorities, binding circulars, incident reporting, ICT third-party notification routes, register submission via eDesk, and TLPT under TIBER-LU.
 
 ## Fillable templates and calculators
 
@@ -72,6 +74,7 @@ Markdown templates and ready-to-use CSVs you can open in any spreadsheet:
 - [Policy register](templates/policy-register.md) · [CSV](templates/policy-register.csv)
 - [Incident classification aid](templates/incident-classification-aid.md) (pre-filled with the real RTS thresholds)
 - [TLPT scoping worksheet](templates/tlpt-scoping-worksheet.md)
+- [Master traceability matrix](templates/master-traceability-matrix.csv) — each control → DORA article → supplementing standard → questionnaire item → audit test → evidence.
 - [Maturity scoring calculator (CSV)](templates/maturity-scoring-calculator.csv) — all 48 controls with score, legal-flag, gap and priority columns.
 
 ## Worked example
