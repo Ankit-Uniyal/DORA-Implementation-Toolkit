@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DORA Combined Workbook (auto-calculating)</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9198a1;--line:#30363d;--accent:#2f81f7;--red:#f85149;--amber:#d29922;--green:#3fb950;--head:#1f2630;}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:16px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+h1{font-size:18px;margin:0 0 4px} .sub{color:var(--mut);font-size:12px;max-width:1000px}
+nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav button{background:transparent;color:var(--mut);border:1px solid transparent;border-radius:6px;padding:7px 12px;cursor:pointer;font-size:13px}
+nav button:hover{color:var(--ink);background:#21262d}
+nav button.active{color:var(--ink);background:#21262d;border-color:var(--line)}
+main{padding:18px 16px;max-width:1400px;margin:0 auto}
+.tab{display:none} .tab.active{display:block}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.kpi{flex:1;min-width:150px;background:var(--head);border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpi .n{font-size:26px;font-weight:700} .kpi .l{color:var(--mut);font-size:12px;margin-top:2px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--head);position:sticky;top:52px;z-index:2}
+td[contenteditable="true"]{background:#0f1620;cursor:text}
+td[contenteditable="true"]:focus{outline:2px solid var(--accent);background:#0b1220}
+.scroll{overflow:auto;max-height:70vh;border:1px solid var(--line);border-radius:8px}
+.pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.rag-red{background:rgba(248,81,73,.18);color:#ff7b72}
+.rag-amber{background:rgba(210,153,34,.18);color:#e3b341}
+.rag-green{background:rgba(63,185,80,.18);color:#56d364}
+.bar{height:12px;border-radius:6px;background:#21262d;overflow:hidden}
+.bar>i{display:block;height:100%}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 12px;cursor:pointer;font-size:13px}
+.btn.sec{background:#21262d;color:var(--ink);border:1px solid var(--line)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.note{color:var(--mut);font-size:12px}
+.heat td{text-align:center;font-weight:600}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:8px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+<h1>DORA Combined Workbook &mdash; auto-calculating</h1>
+<div class="sub">Single-file, offline-capable. Loads the toolkit registers, computes maturity scores and a live heat map, and exports each tab to CSV. Edit any blue cell; scores recompute instantly. Not legal advice &mdash; verify figures against EUR-Lex and your competent authority.</div>
+</header>
+<nav id="nav"></nav>
+<main>
+  <section id="dashboard" class="tab active">
+    <div class="card"><div class="row" id="kpis"></div></div>
+    <div class="card">
+      <h3 style="margin-top:0">Maturity heat map by pillar</h3>
+      <div class="scroll"><table class="heat"><thead><tr>
+        <th style="text-align:left">Pillar</th><th>Controls</th><th>Scored</th><th>Avg score (0-5)</th><th>Below target</th><th>Legal fails</th><th>RAG</th>
+      </tr></thead><tbody id="heatBody"></tbody></table></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--green)"></i>Green: avg &ge; 3.5 &amp; no legal fail</span>
+        <span><i class="dot" style="background:var(--amber)"></i>Amber: avg 2&ndash;3.5</span>
+        <span><i class="dot" style="background:var(--red)"></i>Red: avg &lt; 2 or any legal fail</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Overall readiness</h3>
+      <div class="bar" style="max-width:520px"><i id="overallBar"></i></div>
+      <div class="note" id="overallTxt" style="margin-top:6px"></div>
+    </div>
+  </section>
+  <section id="maturity" class="tab">
+    <div class="card">
+      <div class="toolbar"><strong>Maturity scoring</strong>
+        <span class="note">Type current score 0&ndash;5 in the blue column. Pillar rollups and the dashboard update automatically. "Legal fail" fires when a legal-duty control scores &lt; 3.</span>
+        <span style="flex:1"></span><button class="btn sec" onclick="exportTab('maturity')">Export CSV</button></div>
+      <div class="scroll" id="maturityWrap"></div>
+    </div>
+  </section>
+  <section id="assets" class="tab"><div class="card">
+    <div class="toolbar"><strong>ICT asset &amp; dependency register</strong><span style="flex:1"></span><button class="btn sec" onclick="exportTab('assets')">Export CSV</button></div>
+    <div class="scroll" id="assetsWrap"></div></div></section>
+  <section id="thirdparty" class="tab"><div class="card">
+    <div class="toolbar"><strong>ICT third-party register of information</strong><span style="flex:1"></span><button class="btn sec" onclick="exportTab('thirdparty')">Export CSV</button></div>
+    <div class="scroll" id="thirdpartyWrap"></div></div></section>
+  <section id="policies" class="tab"><div class="card">
+    <div class="toolbar"><strong>Policy register</strong><span style="flex:1"></span><button class="btn sec" onclick="exportTab('policies')">Export CSV</button></div>
+    <div class="scroll" id="policiesWrap"></div></div></section>
+  <section id="about" class="tab"><div class="card">
+    <h3 style="margin-top:0">How this workbook works</h3>
+    <p class="note">On load it fetches the four source CSVs from the toolkit's <code>main</code> branch. If offline or blocked, it falls back to embedded headers so it still opens. Every blue cell is editable; the maturity tab drives the dashboard heat map in real time.</p>
+    <ul class="note">
+      <li><b>Maturity scoring:</b> current score 0&ndash;5 vs target; gap and legal-fail computed live.</li>
+      <li><b>Heat map:</b> per-pillar average, count below target, legal fails, and a RAG rating.</li>
+      <li><b>Overall readiness:</b> mean of scored controls as a % of 5, minus a penalty for any legal fail.</li>
+      <li><b>Export:</b> each tab re-serialises to CSV preserving the original column order.</li>
+    </ul>
+    <p class="note">Regulatory figures live in <code>docs/regulatory-references.md</code> (single source of truth). This tool does not give legal or investment advice.</p>
+  </div></section>
+</main>
+<script>
+var RAW="https://raw.githubusercontent.com/Ankit-Uniyal/DORA-Implementation-Toolkit/main/";
+var SRC={maturity:"templates/maturity-scoring-calculator.csv",assets:"templates/ict-asset-register.csv",thirdparty:"templates/third-party-register.csv",policies:"templates/policy-register.csv"};
+var FALLBACK={maturity:"control_id,pillar,control_name,legal_duty,current_score_0_5,target_score,evidence_reference,legal_item_passed,gap_below_3,priority,root_cause,fix_action,owner,due_date,recheck_date",assets:"asset_id,asset_name,asset_type,business_function_supported,critical_or_important,owner,hosting_location,third_party_provider,dependencies,confidentiality,integrity,availability,rto,rpo,last_backup_test,last_restore_test,notes",thirdparty:"arrangement_id,provider_legal_name,provider_lei,provider_country,service_description,service_type,supports_critical_or_important_function,functions_supported,contract_start,contract_end,notice_period,data_locations,sub_outsourcing,substitutability,concentration_flag,audit_access_rights_secured,tlpt_cooperation_clause,exit_strategy_documented,exit_strategy_tested,ctpp_designated,risk_rating,contract_owner,last_due_diligence,last_review",policies:"policy_id,policy_name,dora_pillar,dora_articles,owner,approver,approved_date,last_review,next_review,status,linked_controls,evidence_location"};
+var TABS=[["dashboard","Dashboard"],["maturity","Maturity scoring"],["assets","Asset register"],["thirdparty","Third-party register"],["policies","Policy register"],["about","About"]];
+var DATA={};
+function parseCSV(txt){var rows=[],row=[],f="",q=false;for(var i=0;i<txt.length;i++){var c=txt[i];if(q){if(c=='"'){if(txt[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else{if(c=='"')q=true;else if(c==","){row.push(f);f=""}else if(c=="\n"){row.push(f);rows.push(row);row=[];f=""}else if(c=="\r"){}else f+=c}}if(f.length||row.length){row.push(f);rows.push(row)}return rows.filter(function(r){return r.some(function(x){return x!==""})});}
+function esc(v){v=(v==null?"":String(v));return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function toCSV(obj){var h=obj.header;var out=[h.join(",")];obj.rows.forEach(function(r){out.push(h.map(function(k){return esc(r[k])}).join(","))});return out.join("\n")+"\n";}
+function buildNav(){var n=document.getElementById("nav");TABS.forEach(function(t){var b=document.createElement("button");b.textContent=t[1];b.dataset.t=t[0];if(t[0]=="dashboard")b.className="active";b.onclick=function(){show(t[0])};n.appendChild(b)});}
+function show(id){document.querySelectorAll(".tab").forEach(function(s){s.classList.toggle("active",s.id==id)});document.querySelectorAll("#nav button").forEach(function(b){b.classList.toggle("active",b.dataset.t==id)});if(id=="dashboard")recompute();}
+function makeTable(key,editableCols){var d=DATA[key];var h=d.header;var t=document.createElement("table");var thead="<thead><tr>"+h.map(function(k){return "<th>"+k+"</th>"}).join("")+"</tr></thead>";var body=d.rows.map(function(r,ri){return "<tr>"+h.map(function(k){var ed=editableCols.indexOf(k)>-1;return "<td"+(ed?' contenteditable="true" data-k="'+k+'" data-ri="'+ri+'" data-key="'+key+'"':'')+">"+(r[k]==null?"":String(r[k]).replace(/</g,"&lt;"))+"</td>"}).join("")+"</tr>"}).join("");t.innerHTML=thead+"<tbody>"+body+"</tbody>";return t;}
+function pillarOf(p){p=(p||"").trim();var m=p.match(/^\d/);return m?("Pillar "+m[0]):(p||"Unassigned");}
+function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+function isLegal(v){return /yes/i.test(v||"");}
+function heatColor(avg){var t=Math.max(0,Math.min(1,avg/5));var r=Math.round(248+(63-248)*t),g=Math.round(81+(185-81)*t),b=Math.round(73+(80-73)*t);return "rgb("+r+","+g+","+b+")";}
+function recompute(){var d=DATA.maturity;if(!d)return;d.rows.forEach(function(r){var s=num(r.current_score_0_5);var tgt=num(r.target_score);r.gap_below_3=(s!=null&&tgt!=null&&s<tgt)?"Yes":(s!=null?"No":"");r.legal_item_passed=isLegal(r.legal_duty)?((s!=null)?(s>=3?"Pass":"FAIL"):""):"n/a";});var pil={};d.rows.forEach(function(r){var p=pillarOf(r.pillar);pil[p]=pil[p]||{n:0,scored:0,sum:0,below:0,legalfail:0};var o=pil[p];o.n++;var s=num(r.current_score_0_5);if(s!=null){o.scored++;o.sum+=s;}if(r.gap_below_3=="Yes")o.below++;if(r.legal_item_passed=="FAIL")o.legalfail++;});var body=document.getElementById("heatBody");body.innerHTML="";var order=Object.keys(pil).sort();var totScored=0,totSum=0,totLegalFail=0,totN=0,totBelow=0;order.forEach(function(p){var o=pil[p];var avg=o.scored?o.sum/o.scored:null;totScored+=o.scored;totSum+=o.sum;totLegalFail+=o.legalfail;totN+=o.n;totBelow+=o.below;var rag,cls;if(o.legalfail>0||(avg!=null&&avg<2)){rag="Red";cls="rag-red"}else if(avg==null||avg<3.5){rag="Amber";cls="rag-amber"}else{rag="Green";cls="rag-green"}var bg=(avg==null)?"":("background:"+heatColor(avg)+";color:#0d1117");var tr=document.createElement("tr");tr.innerHTML="<td style='text-align:left'>"+p+"</td><td>"+o.n+"</td><td>"+o.scored+"</td><td style='"+bg+"'>"+(avg==null?"&ndash;":avg.toFixed(2))+"</td><td>"+o.below+"</td><td>"+(o.legalfail?("<span class='pill rag-red'>"+o.legalfail+"</span>"):0)+"</td><td><span class='pill "+cls+"'>"+rag+"</span></td>";body.appendChild(tr);});var overallAvg=totScored?totSum/totScored:0;var pct=Math.max(0,Math.round(overallAvg/5*100)-(totLegalFail>0?10:0));var kp=[["Controls",totN],["Scored",totScored+" / "+totN],["Avg maturity",totScored?overallAvg.toFixed(2):"–"],["Below target",totBelow],["Legal fails",totLegalFail]];document.getElementById("kpis").innerHTML=kp.map(function(k){var extra=(k[0]=="Legal fails"&&k[1]>0)?"color:var(--red)":"";return "<div class='kpi'><div class='n' style='"+extra+"'>"+k[1]+"</div><div class='l'>"+k[0]+"</div></div>"}).join("");var bar=document.getElementById("overallBar");bar.style.width=pct+"%";bar.style.background=pct>=70?"var(--green)":pct>=40?"var(--amber)":"var(--red)";document.getElementById("overallTxt").textContent="Overall readiness "+pct+"% (mean of scored controls vs 5"+(totLegalFail>0?", minus 10-point legal-fail penalty)":")")+". "+totScored+" of "+totN+" controls scored.";}
+function wire(){document.addEventListener("input",function(e){var td=e.target;if(td.getAttribute&&td.getAttribute("contenteditable")=="true"){var key=td.dataset.key,k=td.dataset.k,ri=+td.dataset.ri;DATA[key].rows[ri][k]=td.textContent;if(key=="maturity")recompute();}});}
+function exportTab(key){var csv=toCSV(DATA[key]);var blob=new Blob([csv],{type:"text/csv"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=key+"-export.csv";a.click();}
+function ingest(key,txt){var rows=parseCSV(txt);var header=rows[0];var objs=rows.slice(1).map(function(r){var o={};header.forEach(function(h,i){o[h]=r[i]==null?"":r[i]});return o;});DATA[key]={header:header,rows:objs};}
+function render(){document.getElementById("maturityWrap").appendChild(makeTable("maturity",["current_score_0_5","target_score","evidence_reference","priority","root_cause","fix_action","owner","due_date","recheck_date"]));document.getElementById("assetsWrap").appendChild(makeTable("assets",DATA.assets.header));document.getElementById("thirdpartyWrap").appendChild(makeTable("thirdparty",DATA.thirdparty.header));document.getElementById("policiesWrap").appendChild(makeTable("policies",DATA.policies.header));recompute();}
+async function boot(){buildNav();wire();for(var key in SRC){try{var res=await fetch(RAW+SRC[key]+"?t="+Date.now(),{cache:"no-store"});if(!res.ok)throw 0;ingest(key,await res.text());}catch(e){ingest(key,FALLBACK[key]);}}render();}
+boot();
+</script>
+</body>
+</html>
