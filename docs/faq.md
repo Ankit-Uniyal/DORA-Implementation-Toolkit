@@ -1,4 +1,4 @@
-docs/faq.md# DORA FAQ: What Compliance Really Means (and What It Does Not)
+# DORA FAQ: What Compliance Really Means (and What It Does Not)
 
 **Last reviewed: 3 July 2026.** Plain-English answers to the questions people ask
 most when they start. This is guidance, not legal advice. Confirm anything that
