@@ -1,6 +1,6 @@
 # DORA Self-Assessment Questionnaire
 
-A deeper questionnaire for gap analysis. Each control is broken into small, testable sub-questions so the score is based on real evidence, not a gut feel. Read the [maturity model](maturity-model.md) first, then follow the scoring rule below.
+A deeper questionnaire for gahp analysis. Each control is broken into small, testable sub-questions so the score is based on real evidence, not a gut feel. Read the [maturity model](maturity-model.md) first, then follow the scoring rule below.
 
 **Read first:** [Glossary](../glossary.md).
 
@@ -146,13 +146,13 @@ For each control:
 
 ### INC-04 Reporting timeliness
 - Is the reporting owner pre-assigned, with a backup?
-- Are the current ITS deadlines built into the runbook? **(legal)**
+- Are the current Reporting RTS deadlines built into the runbook? **(legal)**
 - For every major incident in the period, were initial, intermediate, and final reports on time? **(legal)**
 - Has a timed exercise proven you can meet the first deadline?
 - Score (0-5): ___  Evidence: ___
 
 ### INC-05 Reporting content
-- Do reports match the ITS template fields? **(legal)**
+- Do reports match the Reporting RTS template fields? **(legal)**
 - Are they complete and accurate?
 - Score (0-5): ___  Evidence: ___
 
