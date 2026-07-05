@@ -18,6 +18,9 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 - "templates/master-traceability-matrix.csv" — audit-navigable matrix linking each of the 48 controls to its DORA article, supplementing RTS/ITS, questionnaire item, audit test (A-*), primary evidence, and an evidence-location/status column to fill in.
 - "docs/regulatory-references.md" — added the Reporting ITS (EU) 2025/302 (forms, templates, procedures) as a distinct row alongside the Reporting RTS 2025/301.
 
+### Fixed
+- "templates/dora-workbook.html" — sticky table headers were offset by 52px and overlapped the first data row (hiding Pillar 1 on the heat map and the first control on each register). Header offset corrected to the top of each scroll container, and the dashboard heat-map header set to static. Verified live on GitHub Pages: 48 controls load, entering a score recomputes the pillar rollup, dashboard tiles and RAG colour instantly.
+
 ### Changed
 - "docs/regulatory-references.md" — every instrument number, OJ citation, in-force status, incident-classification threshold, and reporting deadline re-verified against the authentic Official Journal text on EUR-Lex; "last verified" note updated accordingly.
 
@@ -87,3 +90,17 @@ can detect regulatory drift.
 Format loosely follows Keep a Changelog. Dates are ISO 8601.
 
 ## [Unreleased]
+# Changelog
+
+All notable changes to the DORA Implementation and Self-Assessment Toolkit.
+Because this toolkit summarises binding EU law, every content change should note
+**which RTS/ITS version it reflects** and **when it was last verified**, so users
+can detect regulatory drift.
+
+Format loosely follows Keep a Changelog. Dates are ISO 8601.
+
+## [Unreleased]
+
+## [2026-07-05]
+
+### Added
