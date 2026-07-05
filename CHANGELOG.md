@@ -82,27 +82,3 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 
 > Reminder: re-verify all figures against EUR-Lex at least yearly and after any
 > ESA announcement of amended standards, then update the "last verified" dates.
-# Changelog
-
-All notable changes to the DORA Implementation and Self-Assessment Toolkit.
-Because this toolkit summarises binding EU law, every content change should note
-**which RTS/ITS version it reflects** and **when it was last verified**, so users
-can detect regulatory drift.
-
-Format loosely follows Keep a Changelog. Dates are ISO 8601.
-
-## [Unreleased]
-# Changelog
-
-All notable changes to the DORA Implementation and Self-Assessment Toolkit.
-Because this toolkit summarises binding EU law, every content change should note
-**which RTS/ITS version it reflects** and **when it was last verified**, so users
-can detect regulatory drift.
-
-Format loosely follows Keep a Changelog. Dates are ISO 8601.
-
-## [Unreleased]
-
-## [2026-07-05]
-
-### Added
