@@ -20,6 +20,7 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 
 ### Fixed
 - "templates/dora-workbook.html" — sticky table headers were offset by 52px and overlapped the first data row (hiding Pillar 1 on the heat map and the first control on each register). Header offset corrected to the top of each scroll container, and the dashboard heat-map header set to static. Verified live on GitHub Pages: 48 controls load, entering a score recomputes the pillar rollup, dashboard tiles and RAG colour instantly.
+- "templates/dora-workbook.html" — removed a duplicate CSS/HTML block that had been accidentally appended after the closing </html>; it was overriding the corrected header rule and reintroducing the overlap. File is now a single well-formed document (126 lines) and verified live on GitHub Pages.
 
 ### Changed
 - "docs/regulatory-references.md" — every instrument number, OJ citation, in-force status, incident-classification threshold, and reporting deadline re-verified against the authentic Official Journal text on EUR-Lex; "last verified" note updated accordingly.
