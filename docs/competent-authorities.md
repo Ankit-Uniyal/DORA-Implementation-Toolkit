@@ -1,4 +1,4 @@
-docs/competent-authorities.md# Who Supervises You: National Competent Authorities and Incident Reporting
+# Who Supervises You: National Competent Authorities and Incident Reporting
 
 **Last reviewed: 3 July 2026.** This appendix helps you answer two practical
 questions a first-timer always hits: *which authority supervises us*, and
