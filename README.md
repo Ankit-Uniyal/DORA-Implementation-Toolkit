@@ -75,6 +75,7 @@ Markdown templates and ready-to-use CSVs you can open in any spreadsheet:
 - [Incident classification aid](templates/incident-classification-aid.md) (pre-filled with the real RTS thresholds)
 - [TLPT scoping worksheet](templates/tlpt-scoping-worksheet.md)
 - [Master traceability matrix](templates/master-traceability-matrix.csv) — each control → DORA article → supplementing standard → questionnaire item → audit test → evidence.
+- [Combined workbook](templates/dora-workbook.html) — open in any browser: linked tabs for the registers and maturity scoring, with an auto-calculating heat map, overall-readiness gauge, and per-tab CSV export.
 - [Maturity scoring calculator (CSV)](templates/maturity-scoring-calculator.csv) — all 48 controls with score, legal-flag, gap and priority columns.
 
 ## Worked example
