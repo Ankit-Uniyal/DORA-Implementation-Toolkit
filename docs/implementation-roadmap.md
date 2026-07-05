@@ -26,7 +26,7 @@ Now protect what you identified, and be able to spot and survive trouble.
 - Write the information security policy and control standards.
 - Set up detection: logging and alerting on critical systems.
 - Define RTO and RPO for critical functions, write recovery plans, and set up segregated backups.
-- Stand up the incident process, the classification aid (with RTS thresholds), and the reporting runbook (with ITS deadlines and a named owner).
+- Stand up the incident process, the classification aid (with RTS thresholds), and the reporting runbook (with Reporting RTS deadlines and a named owner).
 
 **End of phase check:** you can protect, detect, recover, and you have a working, owned incident-reporting runbook.
 
