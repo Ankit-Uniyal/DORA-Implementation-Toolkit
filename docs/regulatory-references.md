@@ -7,8 +7,8 @@ standards (ITS) are amended over time; this file records the version the toolkit
 was written against so you can spot drift.
 
 This file is the single source of truth for the numbers that other documents in
-this toolkit refer to. Where a guide previously said `[from RTS]` or
-`[from ITS]`, it now points here. If a figure changes in law, change it here
+this toolkit refer to. Where a guide previously said \`[from RTS]\` or
+\`[from ITS]\`, it now points here. If a figure changes in law, change it here
 once and every guide stays correct.
 
 ---
@@ -24,6 +24,7 @@ the instrument; open it and you land on the authentic text.
 | DORA | Regulation (EU) 2022/2554 (14 Dec 2022) | OJ L 333, 27.12.2022, p. 1 | The main law, all five pillars | http://data.europa.eu/eli/reg/2022/2554/oj |
 | ICT risk RTS | Commission Delegated Regulation (EU) 2024/1774 (13 Mar 2024) | OJ L, 2024/1774, 25.6.2024 | Pillar 1: ICT risk-management tools, methods, processes, policies and the simplified framework | http://data.europa.eu/eli/reg_del/2024/1774/oj |
 | Classification RTS | Commission Delegated Regulation (EU) 2024/1772 (13 Mar 2024) | OJ L, 2024/1772, 25.6.2024 | Incident classification criteria and materiality thresholds | http://data.europa.eu/eli/reg_del/2024/1772/oj |
+| Policy RTS (ICT services supporting critical or important functions) | Commission Delegated Regulation (EU) 2024/1773 (13 Mar 2024) | OJ L, 2024/1773, 25.6.2024 | Pillar 4: the policy on the use of ICT services supporting critical or important functions (DORA Art. 28(2)) | http://data.europa.eu/eli/reg_del/2024/1773/oj |
 | Register ITS | Commission Implementing Regulation (EU) 2024/2956 (29 Nov 2024) | OJ L, 2024/2956, 2.12.2024 | Pillar 4: standard templates for the register of information | http://data.europa.eu/eli/reg_impl/2024/2956/oj |
 | Reporting RTS | Commission Delegated Regulation (EU) 2025/301 (23 Oct 2024) | OJ L, 2025/301, 20.2.2025 | Content and time limits for initial / intermediate / final reports and voluntary threat notifications | http://data.europa.eu/eli/reg_del/2025/301/oj |
 | Reporting ITS | Commission Implementing Regulation (EU) 2025/302 (23 Oct 2024) | OJ L, 2025/302, 20.2.2025 | Standard forms, templates, and procedures for reporting major incidents and voluntary threat notifications | http://data.europa.eu/eli/reg_impl/2025/302/oj |
@@ -38,8 +39,8 @@ ESA pages:
 
 - EBA DORA page: https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act
 - To confirm any instrument yourself: open https://eur-lex.europa.eu and search the
-  regulation number (for example "2024/1772"), then read the "In force" status and
-  the ELI at the top of the page.
+regulation number (for example "2024/1772"), then read the "In force" status and
+the ELI at the top of the page.
 
 > Note on dates: several Pillar 3 and Pillar 4 standards (Subcontracting RTS
 > 2025/532 and TLPT RTS 2025/1190) were published in mid-2025. Because standards
