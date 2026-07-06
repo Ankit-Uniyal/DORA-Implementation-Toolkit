@@ -1,6 +1,6 @@
 # DORA Self-Assessment Questionnaire
 
-A deeper questionnaire for gahp analysis. Each control is broken into small, testable sub-questions so the score is based on real evidence, not a gut feel. Read the [maturity model](maturity-model.md) first, then follow the scoring rule below.
+A deeper questionnaire for gap analysis. Each control is broken into small, testable sub-questions so the score is based on real evidence, not a gut feel. Read the [maturity model](maturity-model.md) first, then follow the scoring rule below.
 
 **Read first:** [Glossary](../glossary.md).
 
