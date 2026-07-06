@@ -9,6 +9,29 @@ Format loosely follows Keep a Changelog. Dates are ISO 8601.
 
 ## [Unreleased]
 
+## [2026-07-07]
+
+### Added
+- Model policies (skeleton drafts) in "templates/model-policies/": ICT risk management, information security, business continuity and DR, incident management and reporting, and the Art. 28(2) ICT third-party risk policy, plus a folder README. All reference regulatory-references.md for figures.
+- "templates/critical-function-determination-worksheet.md" - scored, repeatable method for deciding critical or important functions, with downstream triggers.
+- "docs/full-vs-simplified-framework.md" - control-by-control delta between the full and Art. 16 simplified frameworks.
+- "docs/2-implementation/sub-outsourcing-and-concentration.md" - method for mapping sub-outsourcing chains (Subcontracting RTS 2025/532) and quantifying concentration risk, plus a note on how CTPP oversight fits.
+- "docs/register-of-information-its-mapping.md" - maps the toolkit's working register subset to the official Register ITS (EU) 2024/2956 table structure (B_01-B_07 families) and lists what to add before submission.
+- "examples/worked-ict-risk-framework-and-bia.md" - filled ICT risk framework and a worked business impact analysis showing how RTO/RPO are derived and tested.
+- "examples/novapay-incident-reports.md" - filled initial/intermediate/final major-incident reports (Reporting RTS 2025/301 fields, ITS 2025/302 forms) for the NovaPay scenario.
+- "docs/learning-path-and-self-check.md" - staged zero-to-competence learning path with per-stage self-check questions and answer notes.
+- Standards crosswalk (ISO/IEC 27001, ISO 22301, ISO/IEC 27017/27018, NIST CSF, EBA/ESA guidelines, TIBER-EU) appended to "docs/1-gap-assessment/control-mapping.md", fulfilling the README reference.
+
+### Changed
+- "docs/regulatory-references.md" - added the Policy RTS (Commission Delegated Regulation (EU) 2024/1773) on the policy for ICT services supporting critical or important functions (DORA Art. 28(2)) to the single source of truth, so the TPP-01 citation in control-mapping and the traceability matrix now resolves.
+- "README.md" - linked all the new learning, policy, method, and worked-example artifacts.
+
+### Fixed
+- "docs/1-gap-assessment/self-assessment-questionnaire.md" - corrected a typo ("gahp analysis" -> "gap analysis").
+
+### Regulatory basis (verified 2026-07-05 against EUR-Lex authentic OJ text)
+- DORA 2022/2554; ICT risk RTS 2024/1774; Classification RTS 2024/1772; Policy RTS 2024/1773; Register ITS 2024/2956; Reporting RTS 2025/301; Reporting ITS 2025/302; Subcontracting RTS 2025/532; TLPT RTS 2025/1190 - all confirmed "In force". New content adds no new figures; all figures remain sourced from regulatory-references.md.
+
 ## [2026-07-05]
 
 ### Added
