@@ -115,3 +115,40 @@ Because this toolkit summarises binding EU law, it must be maintained. See
 update the "last verified" dates, and record changes in
 [CHANGELOG.md](CHANGELOG.md). Re-check at least yearly and after any ESA
 announcement of amended standards.
+
+
+## Learn it and build it: added guidance and artifacts
+
+For readers going from little or no DORA knowledge to delivering real work, these
+additions turn the reference material into a build-and-learn path:
+
+**Learning and judgment**
+
+- [Learning path and self-check](docs/learning-path-and-self-check.md) - a staged
+  route from zero to working competence, with a self-test at each stage.
+- [Full vs simplified framework](docs/full-vs-simplified-framework.md) - what
+  actually changes, control by control.
+- [Critical-or-important-function (CIF) determination worksheet](templates/critical-function-determination-worksheet.md)
+  - a scored, repeatable method for the most consequential scoping judgment.
+
+**Model policies (skeleton drafts)**
+
+- [Model policies folder](templates/model-policies/): ICT risk management,
+  information security, business continuity and DR, incident management and
+  reporting, and the Art. 28(2) third-party risk policy.
+
+**Deeper method and worked artifacts**
+
+- [Sub-outsourcing chains and concentration risk](docs/2-implementation/sub-outsourcing-and-concentration.md).
+- [Register of information: mapping to the official ITS tables](docs/register-of-information-its-mapping.md)
+  - what to add before you can actually submit.
+- [Worked ICT risk framework and BIA](examples/worked-ict-risk-framework-and-bia.md)
+  - how RTO/RPO are derived, not guessed.
+- [Worked incident reports (initial / intermediate / final)](examples/novapay-incident-reports.md)
+  - the three regulatory reports, filled in.
+
+**Standards crosswalk**
+
+- The ISO/IEC 27001, ISO 22301, ISO/IEC 27017/27018, NIST CSF, EBA/ESA guidelines,
+  and TIBER-EU mappings are at the end of
+  [docs/1-gap-assessment/control-mapping.md](docs/1-gap-assessment/control-mapping.md).
