@@ -82,3 +82,47 @@ Article numbers are indicative, based on Regulation (EU) 2022/2554 as published.
 | ISH-04 | Art. 45(3) | | Notifications to the regulator on joining or leaving |
 | ISH-05 | Art. 45(1) | | Records showing intelligence used in detection |
 
+
+
+---
+
+## Related standards and frameworks: how they map to DORA
+
+DORA does not replace the security and continuity standards you may already run.
+Most of them are **excellent evidence** for DORA controls, so reuse them. But note
+the gap: certification to a standard proves a control exists; it does **not** by
+itself prove DORA compliance. DORA asks for things no general standard covers
+(incident-reporting deadlines, the register of information, contractual exit
+testing, and TLPT). Map your existing evidence to DORA, then fill what is left.
+
+**How to read this table.** For each DORA pillar it shows where a recognised
+framework gives you a head start, and what DORA still needs on top.
+
+| DORA pillar | ISO/IEC 27001 (ISMS) | ISO 22301 (BCM) | ISO/IEC 27017/27018 (cloud) | NIST CSF 2.0 | EBA/EIOPA/ESMA guidelines | TIBER-EU | What DORA still needs on top |
+|---|---|---|---|---|---|---|---|
+| 0 Governance | A.5 leadership, roles | Clause 5 leadership | - | GOVERN | EBA Internal Governance GL | - | Board accountability for ICT risk (Art. 5); written proportionality assessment |
+| 1 ICT risk mgmt | Annex A controls; risk mgmt clauses | Clause 8 BIA/continuity | Cloud-specific controls | IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER | EBA ICT & Security Risk Mgmt GL | - | Explicit RTO/RPO tested by restore; segregated backups; the "five jobs" evidenced (Art. 8-13) |
+| 2 Incident mgmt | A.5.24-5.28 incident mgmt | Incident response in BCMS | - | RESPOND, RECOVER | EBA major-incident reporting GL (pre-DORA) | - | The DORA classification thresholds (RTS 2024/1772) and the 4h/72h/1-month reporting clock (RTS 2025/301) |
+| 3 Resilience testing | A.8.29 security testing | Exercising & testing | - | ID.RA, PR.PT | - | Full threat-led red-team method | Risk-based test coverage of all critical systems; TLPT per RTS 2025/1190 if named |
+| 4 Third-party risk | A.5.19-5.23 supplier security | Supply-chain continuity | Cloud provider responsibilities | GV.SC (supply chain) | EBA Outsourcing GL | - | The register of information (ITS 2024/2956); Art. 30 contract terms; tested exit; concentration/sub-outsourcing (RTS 2025/532, 2024/1773) |
+| 5 Information sharing | A.5.6 threat intelligence | - | - | ID.RA, DE.AE | - | - | Formal trusted-community arrangement with GDPR/competition safeguards; regulator notification (Art. 45) |
+
+**Practical reuse tips.**
+
+- If you hold **ISO/IEC 27001**, map its Statement of Applicability to the RM and
+  INC control objectives; most Protect (Art. 9) evidence is already there.
+- If you hold **ISO 22301**, your BIA, RTO/RPO, and exercise records feed RM-06,
+  RM-07, and much of Pillar 3 baseline testing.
+- For cloud, a provider's **ISO/IEC 27017/27018**, **SOC 2 Type II**, or
+  **ISAE 3402** reports are accepted audit substitutes under proportionality
+  (see playbook 04, section 14).
+- **TIBER-EU** is the method the TLPT RTS is built on; if you are named for TLPT,
+  align directly to it.
+- The relevant **ESA/EBA guidelines** predate DORA in places and have partly been
+  absorbed into it; use them for detail but treat DORA and its RTS/ITS as the
+  binding text. Confirm current status on the ESA pages listed in
+  [regulatory-references.md](../regulatory-references.md).
+
+> Reminder: a mapping shows where evidence *can* be reused. You still have to
+> point each piece of evidence at the specific DORA control and close the gaps
+> the standard does not cover.
